@@ -1,0 +1,39 @@
+// color palette
+$red: #c31727;
+$blue: #103b53;
+$pink: #F6D8D6;
+$teal: #15697C;
+$orange: #D38C6A;
+
+// typography
+$heading: 'Montserrat', sans-serif;
+
+@font-face {
+    font-family: clearSans;
+    src: url(../assets/clear-sans.medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: clearSans;
+    src: url(../assets/clear-sans.regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: clearSans;
+    src: url(../assets/clear-sans.light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: clearSans;
+    src: url(../assets/clear-sans.thin.ttf);
+    font-weight: 100;
+}
+
+body {
+    font-family: clearSans;
+    font-weight: 400;
+    font-size: 1.8rem;
+}

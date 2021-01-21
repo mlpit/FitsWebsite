@@ -1,0 +1,26 @@
+.navBar,
+.headerNav {
+    display: flex;
+}
+
+.navBar {
+    padding: 15px;
+}
+
+.headerNav li {
+    margin: 0 15px;
+}
+
+.logo {
+    display: block;
+    background-image: url(../assets/FITS_logo.png);
+    background-size: cover;
+    width: 10rem;
+    height: 5rem;
+}
+
+h1 {
+    font-family: $heading;
+    color: $red;
+    font-size: 6rem;
+}
