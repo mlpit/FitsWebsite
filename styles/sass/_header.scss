@@ -1,18 +1,59 @@
+header {
+    background-image: url(../assets/FitsHeader.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.overlay {
+    background-color: rgba($color: white, $alpha: 0.2);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .navBar,
-.headerNav {
+.headerNav,
+.sandalNav {
     display: flex;
 }
 
 .navBar {
     padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgba($color: white, $alpha: 0.4);
+    font-size: 2rem;
+    font-weight: 500;
+    height: 6rem;
+}
+
+.headerNav {
+    width: 100vw;
+    justify-content: center;
 }
 
 .headerNav li {
-    margin: 0 15px;
+    margin: 0 25px;
+}
+
+.headerNav a:hover,
+.headerNav a:focus {
+    color: $red;
+    transition: 0.2s;
+}
+
+.headerNav a:focus {
+    outline: none;
 }
 
 .logo {
-    display: block;
+    position: absolute;
+    top: 5px;
     background-image: url(../assets/FITS_logo.png);
     background-size: cover;
     width: 10rem;
@@ -20,7 +61,31 @@
 }
 
 h1 {
-    font-family: $heading;
+    margin-top: 25px;
+    text-align: center;
     color: $red;
-    font-size: 6rem;
+    font-size: 12rem;
+    width: 70%;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    line-height: 1;
 }
+
+.sandalNav a {
+    display: block;
+    margin: 0 25px;
+    padding: 12px 25px;
+    border-radius: 25px;
+    background-color:$blue;
+    color: white;
+    width: 15rem;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 2px 2px black;
+} 
+
+.sandalNav a:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
