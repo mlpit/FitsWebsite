@@ -274,25 +274,25 @@ h1 {
 
 @font-face {
   font-family: clearSans;
-  src: url(../assets/clear-sans.medium.ttf);
+  src: url(../typography/clear-sans.medium.ttf);
   font-weight: 500;
 }
 
 @font-face {
   font-family: clearSans;
-  src: url(../assets/clear-sans.regular.ttf);
+  src: url(../typography/clear-sans.regular.ttf);
   font-weight: 400;
 }
 
 @font-face {
   font-family: clearSans;
-  src: url(../assets/clear-sans.light.ttf);
+  src: url(../typography/clear-sans.light.ttf);
   font-weight: 300;
 }
 
 @font-face {
   font-family: clearSans;
-  src: url(../assets/clear-sans.thin.ttf);
+  src: url(../typography/clear-sans.thin.ttf);
   font-weight: 100;
 }
 
@@ -410,24 +410,65 @@ h1 {
   cursor: pointer;
 }
 
-.sandalNav a {
-  display: block;
-  margin: 0 25px;
-  padding: 12px 25px;
-  border-radius: 25px;
-  background-color: #103b53;
-  color: white;
-  width: 15rem;
-  text-align: center;
-  font-size: 2rem;
-  text-shadow: 2px 2px black;
+.sampleStyles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 50px;
 }
 
-.sandalNav a:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+.styleContainer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 400px;
+  height: 300px;
+  margin: 20px;
+}
+
+.womenStyles img,
+.menStyles img {
+  display: none;
+  width: 400px;
+  height: 300px;
+}
+
+.womenStyles img:active,
+.menStyles img:active {
+  display: block;
+}
+
+.stylesBtn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 5rem;
+  font-weight: 500;
+  color: #103b53;
+  -webkit-box-shadow: 0px 3px 15px rgba(16, 59, 83, 0.2);
+          box-shadow: 0px 3px 15px rgba(16, 59, 83, 0.2);
+}
+
+.stylesBtn p {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.stylesBtn:hover {
+  background-color: rgba(16, 59, 83, 0.1);
+  -webkit-box-shadow: 0px 3px 15px rgba(16, 59, 83, 0.8);
+          box-shadow: 0px 3px 15px rgba(16, 59, 83, 0.8);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 /* Portrait tablet and small desktops */
