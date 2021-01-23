@@ -1,38 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- NEED TO ADD GOOGLE ANAYLTICS HERE -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Fits Footwear | Custom Made Sandals</title>
+
+    <!-- NEED TO FILL IN THIS INFORMTION FOR SEO -->
+    <meta name="theme-color" content="">
+    <meta name="description" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+
+    <!-- NEED TO ADD A FAVICON -->
+
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
     <header>
-        <div class="overlay">
-            <div class="navBar">
-                <a href="" class="logo"></a>
-    
-                <nav>
-                    <ul class="headerNav">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Order</a></li>
-                        <li><a href="">Contact</a></li>
-                    </ul>
-                </nav>
+        <nav class="navBar">
+            <a href="" class="logo"></a>
+            <ul class="navLinks" id="navLinks">
+                <li><a href="">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="">Order</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="mobileMenu" id="mobileMenu" aria-label="Menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
             </div>
+        </nav>
+        
+        <h1>Custom Made Sandals</h1>
+
+        <button class="downBtn" id="downBtn" aria-label="scroll down">
+            <span class="iconify" data-icon="line-md:chevron-double-down" data-inline="false">
+            </span>
+        </button>
+    </header>
+    <main>
+        <!-- SAMPLES STYLES FOR WOMEN AND MEN -->
+        <section class="sampleStyles" id="sampleStyles">
+            <div class="womenStyles">
+
+            </div>
+
+            <div class="menStyles">
             
-            <h1>Custom Made Sandals</h1>
-    
+            </div>
+
             <ul class="sandalNav">
                 <li><a href="">Women</a></li>
                 <li><a href="">Men</a></li>
             </ul>
-        </div>
-    </header>
-    <main>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about" id="about">
+
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact" id="contact">
+
+        </section>
         
     </main>
     <footer>

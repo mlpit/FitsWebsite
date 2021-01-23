@@ -2,21 +2,16 @@ header {
     background-image: url(../assets/FitsHeader.jpg);
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
-    min-height: 100vh;
-}
-
-.overlay {
-    background-color: rgba($color: white, $alpha: 0.2);
+    background-position: bottom;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 .navBar,
-.headerNav,
+.navLinks,
 .sandalNav {
     display: flex;
 }
@@ -26,28 +21,28 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    background-color: rgba($color: white, $alpha: 0.4);
+    background-color: rgba($color: white, $alpha: 0.8);
     font-size: 2rem;
     font-weight: 500;
     height: 6rem;
 }
 
-.headerNav {
+.navLinks {
     width: 100vw;
     justify-content: center;
 }
 
-.headerNav li {
+.navLinks li {
     margin: 0 25px;
 }
 
-.headerNav a:hover,
-.headerNav a:focus {
+.navLinks a:hover,
+.navLinks a:focus {
     color: $red;
     transition: 0.2s;
 }
 
-.headerNav a:focus {
+.navLinks a:focus {
     outline: none;
 }
 
@@ -60,32 +55,36 @@ header {
     height: 5rem;
 }
 
-h1 {
-    margin-top: 25px;
-    text-align: center;
-    color: $red;
-    font-size: 12rem;
-    width: 70%;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    line-height: 1;
+.mobileMenu {
+    display: none;
+    div {
+        width: 25px;
+        height: 3px;
+        margin: 5px 0;
+        background-color: black;
+        transition: all 0.3s ease-in-out;
+    }
 }
 
-.sandalNav a {
-    display: block;
-    margin: 0 25px;
-    padding: 12px 25px;
-    border-radius: 25px;
-    background-color:$blue;
-    color: white;
-    width: 15rem;
+h1 {
+    margin-top: 30vh;
     text-align: center;
-    font-size: 2rem;
-    text-shadow: 2px 2px black;
-} 
+    color: white;
+    text-shadow: 5px 5px $blue;
+    font-size: 12rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    width: 75%;
+    // line-height: 1;
+    // background-color: rgba($color: white, $alpha: 0.5);
+}
 
-.sandalNav a:hover {
-    transform: scale(1.1);
-    transition: 0.2s;
+.downBtn {
+    font-size: 10rem;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    // animation: pulse 2s infinite;
 }
 

@@ -1,0 +1,17 @@
+.sandalNav a {
+    display: block;
+    margin: 0 25px;
+    padding: 12px 25px;
+    border-radius: 25px;
+    background-color:$blue;
+    color: white;
+    width: 15rem;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 2px 2px black;
+} 
+
+.sandalNav a:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
