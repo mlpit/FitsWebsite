@@ -1,7 +1,6 @@
 header {
     background-image: url(../assets/FitsHeader.jpg);
     background-size: cover;
-    background-attachment: fixed;
     background-position: bottom;
     min-height: 100vh;
     display: flex;
@@ -25,6 +24,7 @@ header {
     font-size: 2rem;
     font-weight: 500;
     height: 6rem;
+    z-index: 5;
 }
 
 .navLinks {

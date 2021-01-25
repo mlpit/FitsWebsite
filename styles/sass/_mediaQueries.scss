@@ -8,7 +8,8 @@
 }
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 768px) {
+@media (max-width: 886px) {
+    // HEADER
     .navBar {
         padding: 0;
     }
@@ -66,11 +67,33 @@
     .close .line3 {
         transform: rotate(45deg) translate(-5px, -6px);
     }
+
+    // SAMPLE STYLES
+    .styleContainer {
+        width:300px;
+        height:200px; 
+    }
+
+    .womenStyles,
+    .menStyles{
+        img {
+            width:300px;
+            height:200px; 
+        }
+    }
+
+    .stylesBtn {
+        font-size: 3rem;
+    }
 }
 
 /* Landscape phones and down */
-@media (max-width: 443px) {
+@media (max-width: 681px) {
     h1 {
         font-size: 6rem;
+    }
+
+    .sampleStyles {
+        flex-direction: column;
     }
 }
