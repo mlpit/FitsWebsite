@@ -15,6 +15,29 @@ app.navSlide = () => {
     })
 }
 
+// app.clickHandler = () => {
+//     $('a[href^="#"]s').on('click', function (e) {
+//         e.preventDefault();
+//         let target = this.hash;
+//         let $target = $(target);
+//         let scroll;
+
+//         if ($(window).scrollTop() == 0) {
+//             scroll = ($target.offset().top) - 160
+//         } else {
+//             scroll = ($target.offset().top) - 60
+//         }
+//         $('html, body').animate({
+//             'scrollTop': scroll
+//         }, 900, function () {
+//             window.location.hash = target;
+//         });
+
+//         app.navSlide();
+//     })
+    
+// }
+
 app.swapImagesWomen = () => {
     let $active = $('#womenStyles .active');
     let $next = ($('#womenStyles .active').next().length > 0) ? $('#womenStyles .active').next() : $('#womenStyles img:first');
@@ -36,6 +59,7 @@ app.swapImagesMen = () => {
 app.init = () => {
     app.scrollDown();
     app.navSlide();
+    // app.clickHandler();
     setInterval('app.swapImagesWomen()', 3000);
     setInterval('app.swapImagesMen()', 3000);
 };

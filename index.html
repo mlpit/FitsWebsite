@@ -25,11 +25,11 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <header>
+    <header id="home">
         <nav class="navBar">
             <a href="" class="logo"></a>
             <ul class="navLinks" id="navLinks">
-                <li><a href="">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="">Order</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -84,11 +84,48 @@
 
         <!-- ABOUT SECTION -->
         <section class="about" id="about">
+            <div class="wrapper">
+                <figure>
+                    <img src="./assets/Fits-Footwear-groot-jpeg-2843.jpg" alt="Legs standing on a step wearing black and grey custom sandals">
+                    <figcaption></figcaption>
+                </figure>
+    
+                <div>
+                    <h2>About Fits Sandals</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis recusandae eum eos maiores consequatur illum, consequuntur provident libero sint, incidunt, expedita eaque dicta suscipit et animi exercitationem aspernatur autem. Temporibus maxime animi velit nesciunt quasi voluptas repudiandae placeat hic dolor?</p>
+                </div>
+            </div>
 
         </section>
 
         <!-- CONTACT SECTION -->
         <section class="contact" id="contact">
+            <h3>Contact Us</h3>
+            <div class="wrapper">   
+                <div class="contactInfo">
+                    <p>123 Street</p>
+                    <p>Scarborough, ON</p>
+                    <p>M1V 1E7</p>
+                    <p>123-353-3434</p>
+                    <p>email@gmail.com</p>
+                </div>
+
+                <form action="" class="contactForm">
+                    <label for="userName">Name:</label>
+                    <input type="text" id="userName" placeholder="John Doe" name="name" required>
+                    
+                    <label for="userEmail">Email:</label>
+                    <input type="email" id="userEmail" name="email" placeholder="name@email.com" required>
+
+                    <label for="userSubject">Subject:</label>
+                    <input type="text" id="userSubject" placeholder="Subject line" name="name" required>
+                    
+                    <label for="userMessage">Message:</label>
+                    <textarea id="userMessage" placeholder="Your message here" name="message" required></textarea>
+                    
+                    <button class="btn">Send <span class="iconify" data-icon="grommet-icons:send" data-inline="false"></span></button>
+                </form>
+            </div>
 
         </section>  
     </main>

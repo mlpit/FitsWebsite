@@ -1,0 +1,27 @@
+.about {
+    background-color: rgba($color: $teal, $alpha: 0.1);
+    padding: 50px 0;
+    .wrapper {
+        display: flex;
+        margin: 0 auto;
+    }
+    img {
+        object-fit: cover;
+        width: 400px;
+        height: 550px;
+    }
+    div {
+        margin: 20px 10px;
+        h2 {
+            font-family: $heading;
+            color: $blue;
+            text-align: center;
+            font-size: 5rem;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.5;
+            font-size: 2rem;
+        }
+    }
+}
