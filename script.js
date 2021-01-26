@@ -64,6 +64,7 @@ app.init = () => {
     setInterval('app.swapImagesMen()', 4000);
 };
 
+
 $(function () {
     app.init();
 });

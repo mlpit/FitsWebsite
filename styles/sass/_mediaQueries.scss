@@ -1,7 +1,7 @@
 /* Portrait tablet and small desktops */
 @media (max-width: 1201px) {
     // HEADER
-    h1 {
+    .homeh1 {
         font-size: 9rem;
         width: 100%;
     }
@@ -89,7 +89,7 @@
 
 /* Landscape phones and down */
 @media (max-width: 681px) {
-    h1 {
+    .homeh1 {
         font-size: 6rem;
     }
 

@@ -44,7 +44,150 @@
     </header>
 
     <main>
-        
+        <h1 class="orderh1">Custom Made Sandals</h1>
+
+        <div id="orderSections">
+            <section class="wrapper">
+                <img src="" alt="">
+                <form action="">
+                    <label for="style">Select Style:</label>
+                    <select name="style" id="selectStyle">
+                        <option value="Teenslipper">Teenslipper</option>
+                        <option value="Tweeband">Tweeband</option>
+                        <option value="">Drieband</option>
+                        <option value="Drieband with Heel Strap">Drieband with Heel Strap</option>
+                    </select>
+                    <!-- <button>Next</button> -->
+                </form>
+            </section>
+    
+            <section class="wrapper">
+                <img src="" alt="">
+                <form action="">
+                    <label for="upper">Select Upper:</label>
+                    <select name="upper" id="selectupper">
+                        <option value="Black Leather">Black Leather</option>
+                        <option value="Brown Leather">Brown Leather</option>
+                        <option value="Cognac Leather">Cognac Leather</option>
+                        <option value="Dark Blue Leather with Cognac Accent">Dark Blue Leather with Cognac Accent</option>
+                        <option value="Grey Leather">Grey Leather</option>
+                        <option value="Dark Blue Leather with Red Accent (TEENSLIPPER ONLY)">Dark Blue Leather with Red Accent (TEENSLIPPER ONLY)</option>
+                    </select>
+                    <!-- <button>Previous</button>
+                    <button>Next</button> -->
+                </form>
+            </section>
+    
+            <section class="wrapper">
+                <h2>Select Top Cover</h2>
+                <img src="" alt="">
+                <form action="">
+                    <!-- <button>Previous</button>
+                    <button>Next</button> -->
+                </form>
+            </section>
+    
+            <section class="wrapper">
+                <h2>Select Midlayer</h2>
+                <img src="" alt="">
+                <form action="">
+                    <!-- <button>Previous</button>
+                    <button>Next</button> -->
+                </form>
+            </section>
+    
+            <section class="wrapper">
+                <h2>Select Blank</h2>
+                <img src="" alt="">
+                <form action="">
+                    <!-- <button>Previous</button>
+                    <button>Next</button> -->
+                </form>
+            </section>
+    
+            <section class="wrapper">
+                <h2>Select Sole</h2>
+                <img src="" alt="">
+                <form action="">
+                    <!-- <button>Previous</button>
+                    <button>Ready to Order</button> -->
+                </form>
+            </section>
+    
+            <section class="wrapper">
+                <h2>Complete Order Details</h2>
+                <form action="">
+                    <div>
+                        <label for="company">Company:</label>
+                        <input type="text" id="company" placeholder="" name="name" required>
+    
+                        <label for="addressStreet">Street:</label>
+                        <input type="text" id="addressStreet" placeholder="" name="name" required>
+    
+                        <label for="addressCity">City:</label>
+                        <input type="text" id="addressCity" placeholder="" name="name" required>
+    
+                        <label for="addressProvince">Province:</label>
+                        <input type="text" id="addressProvince" placeholder="" name="name" required>
+    
+                        <label for="addressPostalCode">Postal Code:</label>
+                        <input type="text" id="addressPostalCode" placeholder="" name="name" required>
+                    </div>
+                    
+                    <div>
+                        <label for="patientName">Patient Name:</label>
+                        <input type="text" id="patientName" placeholder="" name="name" required>
+    
+                        <label for="patientNumber">Patient Numbure:</label>
+                        <input type="text" id="patientNumber" placeholder="" name="name" required>
+    
+                        <label for="patientDOB">Date of Birth:</label>
+                        <input type="text" id="patientDOB" placeholder="" name="name" required>
+                    </div>
+    
+                    <div>
+                        <label for="sandalSize">Size:</label>
+                        <select name="sandalSize" id="sandalSizeLeft">
+                            <option value="Left">Left</option>
+                        </select>
+                        <select name="sandalSize" id="sandalSizeRight">
+                            <option value="Right">Right</option>
+                        </select>
+                    </div>
+    
+                    <div>
+                        <label for="sandalWidth">Width (mm):</label>
+                        <select name="sandalWidth" id="sandalWidthLeft">
+                            <option value="Left">Left</option>
+                        </select>
+                        <select name="sandalWidth" id="sandalWidthRight">
+                            <option value="Right">Right</option>
+                        </select>
+                    </div>
+    
+                    <div>
+                        <label for="sandalLift">Extra heel lift (mm):</label>
+                        <select name="sandalLift" id="sandalLiftLeft">
+                            <option value="Left">Left</option>
+                        </select>
+                        <select name="sandalLift" id="sandalLiftRight">
+                            <option value="Right">Right</option>
+                        </select>
+                    </div>
+    
+                    <div>
+                        <label for="notes">Notes:</label>
+                        <textarea name="notes" id="notes"></textarea>
+                    </div>
+    
+                    <button>Submit Order</button>
+                </form>
+            </section>
+        </div>
+        <div class="wrapper">
+            <button id="prev">Previous</button>
+        <button id="next">Next</button>
+        </div>
     </main>
 
     <footer>
@@ -53,5 +196,6 @@
     
     <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
     <script src="script.js"></script>
+    <script src="orderForm.js"></script>
 </body>
 </html>
