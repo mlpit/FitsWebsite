@@ -14,7 +14,7 @@ orderApp.nextSection = () => {
             $(this).hide();
     });
     
-    $("#next").click(function(){
+    $(".nextBtn").click(function(){
         if ($("#orderSections section:visible").next().length != 0)
             $("#orderSections section:visible").next().show().prev().hide();
         else {
@@ -24,7 +24,7 @@ orderApp.nextSection = () => {
         return false;
     });
 
-    $("#prev").click(function(){
+    $(".prevBtn").click(function(){
         if ($("#orderSections section:visible").prev().length != 0)
             $("#orderSections section:visible").prev().show().next().hide();
         else {
@@ -35,8 +35,13 @@ orderApp.nextSection = () => {
     });
 }
 
+orderApp.submitHandler = () => {
+
+}
+
 orderApp.init = () => {
     orderApp.nextSection();
+    orderApp.submitHandler();
 };
 
 $(function () {

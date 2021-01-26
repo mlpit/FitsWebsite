@@ -46,8 +46,8 @@
     <main>
         <h1 class="orderh1">Custom Made Sandals</h1>
 
-        <div id="orderSections">
-            <section class="wrapper">
+        <div id="orderSections" class="wrapper">
+            <section>
                 <img src="" alt="">
                 <form action="">
                     <label for="style">Select Style:</label>
@@ -57,11 +57,11 @@
                         <option value="">Drieband</option>
                         <option value="Drieband with Heel Strap">Drieband with Heel Strap</option>
                     </select>
-                    <!-- <button>Next</button> -->
+                    <button class="nextBtn">Next</button>
                 </form>
             </section>
     
-            <section class="wrapper">
+            <section>
                 <img src="" alt="">
                 <form action="">
                     <label for="upper">Select Upper:</label>
@@ -73,49 +73,56 @@
                         <option value="Grey Leather">Grey Leather</option>
                         <option value="Dark Blue Leather with Red Accent (TEENSLIPPER ONLY)">Dark Blue Leather with Red Accent (TEENSLIPPER ONLY)</option>
                     </select>
-                    <!-- <button>Previous</button>
-                    <button>Next</button> -->
                 </form>
+
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </section>
     
-            <section class="wrapper">
+            <section>
                 <h2>Select Top Cover</h2>
                 <img src="" alt="">
                 <form action="">
-                    <!-- <button>Previous</button>
-                    <button>Next</button> -->
+                    
                 </form>
+
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </section>
     
-            <section class="wrapper">
+            <section>
                 <h2>Select Midlayer</h2>
                 <img src="" alt="">
                 <form action="">
-                    <!-- <button>Previous</button>
-                    <button>Next</button> -->
+                    
                 </form>
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </section>
     
-            <section class="wrapper">
+            <section>
                 <h2>Select Blank</h2>
                 <img src="" alt="">
                 <form action="">
-                    <!-- <button>Previous</button>
-                    <button>Next</button> -->
+                    
                 </form>
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
             </section>
     
-            <section class="wrapper">
+            <section>
                 <h2>Select Sole</h2>
                 <img src="" alt="">
                 <form action="">
-                    <!-- <button>Previous</button>
-                    <button>Ready to Order</button> -->
+                    
                 </form>
+                <button class="prevBtn">Previous</button>
+                <button class="nextBtn">Ready to Order</button>
             </section>
     
-            <section class="wrapper">
+            <section>
                 <h2>Complete Order Details</h2>
+                <button class="prevBtn">Change Order</button>
                 <form action="">
                     <div>
                         <label for="company">Company:</label>
@@ -138,7 +145,7 @@
                         <label for="patientName">Patient Name:</label>
                         <input type="text" id="patientName" placeholder="" name="name" required>
     
-                        <label for="patientNumber">Patient Numbure:</label>
+                        <label for="patientNumber">Patient Number:</label>
                         <input type="text" id="patientNumber" placeholder="" name="name" required>
     
                         <label for="patientDOB">Date of Birth:</label>
@@ -180,13 +187,9 @@
                         <textarea name="notes" id="notes"></textarea>
                     </div>
     
-                    <button>Submit Order</button>
+                    <button class="orderBtn">Submit Order</button>
                 </form>
             </section>
-        </div>
-        <div class="wrapper">
-            <button id="prev">Previous</button>
-        <button id="next">Next</button>
         </div>
     </main>
 
