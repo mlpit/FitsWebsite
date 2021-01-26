@@ -60,8 +60,8 @@ app.init = () => {
     app.scrollDown();
     app.navSlide();
     // app.clickHandler();
-    setInterval('app.swapImagesWomen()', 3000);
-    setInterval('app.swapImagesMen()', 3000);
+    setInterval('app.swapImagesWomen()', 4000);
+    setInterval('app.swapImagesMen()', 4000);
 };
 
 $(function () {
