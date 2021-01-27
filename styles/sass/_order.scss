@@ -3,3 +3,12 @@
     font-size: 5rem;
     margin-top: 100px;
 }
+
+.modelSelection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.radioImage {
+    width: 100px;
+}
