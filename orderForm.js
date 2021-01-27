@@ -84,9 +84,6 @@ orderApp.choices = () => {
         `);
     });
 
-    
-
-
 }
 
 orderApp.moveSections = () => {
