@@ -46,10 +46,12 @@
     <main>
         <h1 class="orderh1">Custom Made Sandals</h1>
 
+        <!-- live preview of customization? PHOTOSHOP?? -->
+
         <div id="orderSections" class="wrapper">
             <section>
+                <h2>Select Style</h2>
                 <form action="" class="formSelections">
-                    <h2>Select Style</h2>
                     <div id="modelSelection" class="modelSelection">
                         
                     </div>
@@ -58,9 +60,9 @@
             </section>
     
             <section>
-                <img src="" alt="">
+                <!-- Should there be a picture epxlaining what the upper is? -->
+                <h2>Select Upper</h2>
                 <form action="" class="formSelections">
-                    <h2>Select Style</h2>
                     <div id="upperSelection" class="modelSelection">
                         
                     </div>
@@ -72,9 +74,10 @@
     
             <section>
                 <h2>Select Top Cover</h2>
-                <img src="" alt="">
-                <form action="">
-                    
+                <form action="" class="formSelections">
+                    <div id="topCoverSelection" class="modelSelection">
+                        
+                    </div>
                 </form>
 
                 <button class="prevBtn">Previous</button>
@@ -83,30 +86,52 @@
     
             <section>
                 <h2>Select Midlayer</h2>
-                <img src="" alt="">
-                <form action="">
-                    
+                <form action="" class="formSelections">
+                    <div id="midlayerSelection" class="modelSelection">
+                        <label>No Midlayer
+                        <input type="radio" name="midlayerSelection" value="none">
+                        <img class="radioImage" src="./assets/Cushion/none.jpg" alt="Circle with line through">
+                        </label>
+
+                        <label>Cushion Black 3mm Midlayer
+                            <input type="radio" name="midlayerSelection" value="cushion">
+                            <img class="radioImage" src="./assets/Cushion/black.png" alt="Black cushion sample">
+                        </label>
+                    </div>
                 </form>
+
                 <button class="prevBtn">Previous</button>
                 <button class="nextBtn">Next</button>
             </section>
     
             <section>
                 <h2>Select Blank</h2>
-                <img src="" alt="">
                 <form action="">
-                    
+                    <div id="blankSelection" class="modelSelection">
+                        <label>EVA Black
+                        <input type="radio" name="blankSelection" value="EVA Black">
+                        <img class="radioImage" src="./assets/Footbed/eva_black.png" alt="Black EVA sample">
+                        </label>
+
+                        <label>EVA Cork
+                            <input type="radio" name="blankSelection" value="EVA Cork">
+                            <img class="radioImage" src="./assets/Footbed/eva_cork.png" alt="Cork EVA sample">
+                        </label>
+                    </div>
                 </form>
+
                 <button class="prevBtn">Previous</button>
                 <button class="nextBtn">Next</button>
             </section>
     
             <section>
-                <h2>Select Sole</h2>
-                <img src="" alt="">
+                <h2>Select Bottom Sole</h2>
                 <form action="">
-                    
+                    <div id="soleSelection" class="modelSelection">
+                        
+                    </div>
                 </form>
+
                 <button class="prevBtn">Previous</button>
                 <button class="nextBtn">Ready to Order</button>
             </section>
