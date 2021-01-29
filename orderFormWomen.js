@@ -295,8 +295,10 @@ orderApp.moveSections = () => {
     });
     
     $(".nextBtn").on('click', function(){
-        if ($("#orderSections section:visible").next().length != 0)
+        if ($("#orderSections section:visible").next().length != 0) {
+            orderApp.highlightSelection();
             $("#orderSections section:visible").next().show().prev().hide();
+        }
         else {
             $("#orderSections section:visible").hide();
             $("#orderSections section:first").show();
@@ -317,9 +319,24 @@ orderApp.moveSections = () => {
 }
 
 orderApp.clearModelChoice = () => {
-    $('#upperPrevBtn').on('click', function() {
+    $('#upperPrevBtn').on('click', function () {
         $("#upperSelection").html('');
     });
+}
+
+orderApp.highlightSelection = () => {
+
+    $('label').on('click', function () {
+        $('label').css("background-color", "transparent")
+        $(this).css("background-color", "rgba(211, 140, 106, 0.2)");
+    });
+
+}
+
+orderApp.inputRequired = () => {
+    // $('.formSelections').validate({
+    //        
+    //     });
 }
 
 orderApp.submitHandler = () => {
@@ -328,9 +345,11 @@ orderApp.submitHandler = () => {
 
 orderApp.init = () => {
     orderApp.choices();
-    orderApp.upperDisplay();
+    orderApp.inputRequired();
     orderApp.moveSections();
+    orderApp.upperDisplay();
     orderApp.clearModelChoice();
+    orderApp.highlightSelection();
     // orderApp.submitHandler();
 };
 
