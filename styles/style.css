@@ -568,7 +568,7 @@ h1 {
   border: 1px solid rgba(16, 59, 83, 0.3);
 }
 
-.contactForm button {
+button {
   margin: 20px auto;
   padding: 5px 0;
   width: 13rem;
@@ -627,24 +627,49 @@ h1 {
   display: none;
 }
 
-input[type="radio"]:checked + label {
-  font-size: 5rem;
-}
-
 .radioImage {
   width: 100px;
 }
 
 .testDiv {
-  margin-top: 30vh;
+  margin-top: 10vh;
   text-align: center;
 }
 
-.testBtn {
-  font-size: 5rem;
+.btn {
   display: inline-block;
-  margin: 15px;
-  border: 5px solid red;
+  font-size: 5rem;
+  margin: 20px;
+  padding: 5px 0;
+  width: 30rem;
+  color: white;
+  background-color: rgba(16, 59, 83, 0.8);
+  border: none;
+}
+
+.btn:visited {
+  color: white;
+}
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.gallery img {
+  width: 600px;
+}
+
+video {
+  width: 400px;
+  margin-top: 30px;
+  border: 2px solid rgba(16, 59, 83, 0.5);
+  -webkit-box-shadow: 0px 3px 15px rgba(16, 59, 83, 0.2);
+          box-shadow: 0px 3px 15px rgba(16, 59, 83, 0.2);
 }
 
 /* Portrait tablet and small desktops */

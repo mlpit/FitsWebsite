@@ -56,12 +56,19 @@ app.swapImagesMen = () => {
     });
 }
 
+app.videoPlay = () => {
+    $('video').mouseover(function() {
+        $('video').get(0).play();
+    })
+}
+
 app.init = () => {
     app.scrollDown();
     app.navSlide();
     // app.clickHandler();
     setInterval('app.swapImagesWomen()', 4000);
     setInterval('app.swapImagesMen()', 4000);
+    app.videoPlay();
 };
 
 

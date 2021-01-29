@@ -32,22 +32,41 @@
     }  
 }
 
-input[type="radio"]:checked + label {
-    font-size: 5rem;
-}
-
 .radioImage {
     width: 100px;
 }
 
 .testDiv {
-    margin-top: 30vh;
+    margin-top: 10vh;
     text-align: center;
 }
 
-.testBtn {
-    font-size: 5rem;
+.btn {
     display: inline-block;
-    margin: 15px;
-    border: 5px solid red;
+    font-size: 5rem;
+    margin: 20px;
+    padding: 5px 0;
+    width: 30rem;
+    color: white;
+    background-color: rgba($color: $blue, $alpha: 0.8);
+    border: none;
+}
+
+.btn:visited {
+        color: white;
+}  
+
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+    img {
+        width: 600px;
+    }
+}
+
+video {
+    width: 400px;
+    margin-top: 30px;
+    border: 2px solid rgba($color: $blue, $alpha: 0.5);
+    box-shadow: 0px 3px 15px rgba($color: $blue, $alpha: 0.2);
 }
