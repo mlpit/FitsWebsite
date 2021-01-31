@@ -1,10 +1,16 @@
 .about {
     background-color: rgba($color: $teal, $alpha: 0.1);
     padding: 50px 0;
-    .wrapper {
-        display: flex;
-        margin: 0 auto;
-    }
+}
+
+
+
+.gallery-cell {
+    width: 100%;
+    margin-right: 10px;
+    counter-increment: gallery-cell;
+
+    display: flex;
     img {
         object-fit: cover;
         width: 400px;
@@ -25,3 +31,13 @@
         }
     }
 }
+
+/* cell number */
+// .gallery-cell:before {
+//   display: block;
+//   text-align: center;
+//   content: counter(gallery-cell);
+//   line-height: 200px;
+//   font-size: 80px;
+//   color: white;
+// }

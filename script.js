@@ -62,9 +62,18 @@ app.videoPlay = () => {
     })
 }
 
+app.carousel = () => {
+    $('.main-gallery').flickity({
+        // options
+        cellAlign: 'left',
+        contain: true
+    });
+}
+
 app.init = () => {
     app.scrollDown();
     app.navSlide();
+    app.carousel();
     // app.clickHandler();
     setInterval('app.swapImagesWomen()', 4000);
     setInterval('app.swapImagesMen()', 4000);
