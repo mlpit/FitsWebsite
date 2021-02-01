@@ -9,13 +9,7 @@
     width: 100%;
     margin-right: 10px;
     counter-increment: gallery-cell;
-
     display: flex;
-    img {
-        object-fit: cover;
-        width: 400px;
-        height: 550px;
-    }
     div {
         margin: 20px 10px;
         h2 {
@@ -30,6 +24,18 @@
             font-size: 2rem;
         }
     }
+}
+
+.portrait-image {
+        object-fit: cover;
+        width: 400px;
+        height: 550px;
+    }
+
+.landscape-image {
+    object-fit: cover;
+    width: 600px;
+    height: 550px;
 }
 
 /* cell number */

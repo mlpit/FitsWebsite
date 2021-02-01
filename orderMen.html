@@ -56,9 +56,12 @@
                         
                     </div>
 
-                    <!-- <input type="submit" class="nextBtn" value="Next"> -->
-                    <button class="nextBtn" type="submit">Next</button>
+                    
+                    
                 </form>
+
+                <!-- <input type="submit" class="nextBtn" value="Next"> -->
+                <button class="nextBtn">Next</button>
             </section>
     
             <section>
@@ -123,10 +126,23 @@
             </section>
     
             <section>
-                <h2>Complete Order Details</h2>
-                <button class="prevBtn">Change Order</button>
                 <form action="" class="formSelections">
+                    <div class="orderSummary">
+                        <h2>Your Order Summary</h2>
+                        
+                        <p>Model: <span id="selectedStyle"></span></p>
+                        <p>Upper: <span id="selectedUpper"></span></p>
+                        <p>Top Cover: <span id="selectedTopCover"></span></p>
+                        <p>Midlayer: <span id="selectedMidlayer"></span></p>
+                        <p>Blank: <span id="selectedBlank"></span></p>
+                        <p>Sole: <span id="selectedSole"></span></p>
+                    </div>
+
+                    <button class="prevBtn">Change Order</button>
+
                     <div>
+                        <h2>Complete Order Details</h2>
+
                         <label for="company">Company:</label>
                         <input type="text" id="company" placeholder="" name="name" required>
     

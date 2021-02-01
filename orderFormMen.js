@@ -263,6 +263,13 @@ orderApp.generalChoices = {
     }
 } 
 
+orderApp.chosenStyle = "";
+orderApp.chosenUpper = "";
+orderApp.chosenTopCover = "";
+orderApp.chosenMidlayer = "";
+orderApp.chosenBlank = "";
+orderApp.chosenSole = "";
+
 orderApp.choices = () => {
     const models = Object.values(orderApp.menChoices.model);
 
@@ -342,17 +349,24 @@ orderApp.upperDisplay = () => {
     
 }
 
+
+
 orderApp.moveSections = () => {
 
     $("#orderSections section").each(function(e) {
         if (e != 0)
             $(this).hide();
     });
+
+    $(".nextBtn").attr('disabled', 'disabled');
     
     $(".nextBtn").on('click', function(){
+
         if ($("#orderSections section:visible").next().length != 0) {
             orderApp.highlightSelection();
+            orderApp.orderSummary();
             $("#orderSections section:visible").next().show().prev().hide();
+            $(".nextBtn").attr('disabled', 'disabled');
         }
         else {
             $("#orderSections section:visible").hide();
@@ -380,18 +394,53 @@ orderApp.clearModelChoice = () => {
 }
 
 orderApp.highlightSelection = () => {
-
     $('label').on('click', function () {
-        $('label').css("background-color", "transparent")
+        $(".nextBtn").removeAttr('disabled');
+        $('label').css("background-color", "transparent");
         $(this).css("background-color", "rgba(211, 140, 106, 0.2)");
     });
+}
 
+
+
+orderApp.orderSummary = () => {
+    $('#modelSelection input').on('click', function () {
+        orderApp.chosenStyle = $(this).val();
+        $('#selectedStyle').html(`<input type="text" readonly="readonly" value="${orderApp.chosenStyle}"></input>`)
+    });
+
+    $('#upperSelection input').on('click', function () {
+        chosenUpper = $(this).val();
+        $('#selectedUpper').html(`<input type="text" readonly="readonly" value="${chosenUpper}"></input>`)
+    });
+
+    $('#topCoverSelection input').on('click', function () {
+        chosenTopCover = $(this).val();
+        $('#selectedTopCover').html(`<input type="text" readonly="readonly" value="${chosenTopCover}"></input>`)
+    });
+
+    $('#midlayerSelection input').on('click', function () {
+        chosenMidlayer = $(this).val();
+        $('#selectedMidlayer').html(`<input type="text" readonly="readonly" value="${chosenMidlayer}"></input>`)
+    });
+
+    $('#blankSelection input').on('click', function () {
+        chosenBlank = $(this).val();
+        $('#selectedBlank').html(`<input type="text" readonly="readonly" value="${chosenBlank}"></input>`)
+    });
+
+    $('#soleSelection input').on('click', function () {
+        chosenSole = $(this).val();
+        $('#selectedSole').html(`<input type="text" readonly="readonly" value="${chosenSole}"></input>`)
+    });
 }
 
 orderApp.inputRequired = () => {
-    // $('.formSelections').validate({
-    //        
-    //     });
+    // $(".nextBtn:first-of-type").on('click', function () {
+    //     if (orderApp.chosenStyle === "") {
+    //         alert("Please make a selection")
+    //     } 
+    // })
 }
 
 orderApp.submitHandler = () => {
@@ -400,11 +449,13 @@ orderApp.submitHandler = () => {
 
 orderApp.init = () => {
     orderApp.choices();
-    orderApp.inputRequired();
+    
     orderApp.moveSections();
     orderApp.upperDisplay();
     orderApp.clearModelChoice();
     orderApp.highlightSelection();
+    orderApp.orderSummary();
+    orderApp.inputRequired();
     // orderApp.submitHandler();
 };
 

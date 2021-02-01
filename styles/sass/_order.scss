@@ -76,3 +76,8 @@ video {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
 }
+
+button:disabled {
+    background: #dddddd;
+    cursor: default;
+}
