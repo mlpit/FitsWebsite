@@ -792,7 +792,7 @@ button {
   width: 100px;
 }
 
-label {
+.selectionLabel {
   background-color: white;
 }
 

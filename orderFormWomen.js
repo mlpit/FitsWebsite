@@ -214,7 +214,7 @@ orderApp.choices = () => {
 
     models.forEach(model => {
         $('#modelSelection').append(`
-            <label>${model.name}
+            <label class="selectionLabel">${model.name}
                 <input type="radio" name="model" value="${model.name}">
                 <img class="radioImage" src=${model.imageUrl} alt="${model.name} sandal">
             </label>
@@ -225,8 +225,8 @@ orderApp.choices = () => {
 
     topCovers.forEach(topCover => {
         $('#topCoverSelection').append(`
-            <label>${topCover.name}
-                <input type="radio" name="upper" value=${topCover.name}>
+            <label class="selectionLabel">${topCover.name}
+                <input type="radio" name="upper" value="${topCover.name}">
                 <img class="radioImage" src=${topCover.imageUrl} alt="${topCover.name} color sample">
             </label>
         `);
@@ -236,8 +236,8 @@ orderApp.choices = () => {
 
     midlayers.forEach(midlayer => {
         $('#midlayerSelection').append(`
-            <label>${midlayer.name}
-                <input type="radio" name="upper" value=${midlayer.name}>
+            <label class="selectionLabel">${midlayer.name}
+                <input type="radio" name="upper" value="${midlayer.name}">
                 <img class="radioImage" src=${midlayer.imageUrl} alt="${midlayer.name} color sample">
             </label>
         `);
@@ -247,8 +247,8 @@ orderApp.choices = () => {
 
     blanks.forEach(blank => {
         $('#blankSelection').append(`
-            <label>${blank.name}
-                <input type="radio" name="upper" value=${blank.name}>
+            <label class="selectionLabel">${blank.name}
+                <input type="radio" name="upper" value="${blank.name}">
                 <img class="radioImage" src=${blank.imageUrl} alt="${blank.name} color sample">
             </label>
         `);
@@ -258,8 +258,8 @@ orderApp.choices = () => {
 
     bottomSoles.forEach(bottomSole => {
         $('#soleSelection').append(`
-            <label>${bottomSole.name}
-                <input type="radio" name="upper" value=${bottomSole.name}>
+            <label class="selectionLabel">${bottomSole.name}
+                <input type="radio" name="upper" value="${bottomSole.name}">
                 <img class="radioImage" src=${bottomSole.imageUrl} alt="${bottomSole.name} color sample">
             </label>
         `);
@@ -269,6 +269,9 @@ orderApp.choices = () => {
 
 orderApp.upperDisplay = () => {
     $("#modelSelection input").on('click', function() {
+
+        $("#upperSelection").html('');
+
         const modelChoice = $('input[name="model"]:checked').val();
 
         const uppers = Object.values(orderApp.womenChoices.upper);
@@ -277,8 +280,8 @@ orderApp.upperDisplay = () => {
         uppersFiltered.forEach(upper => {
             
             $('#upperSelection').append(`
-                <label>${upper.name}
-                    <input type="radio" name="upper" value=${upper.name}>
+                <label class="selectionLabel">${upper.name}
+                    <input type="radio" name="upper" value="${upper.name}">
                     <img class="radioImage" src=${upper.imageUrl} alt="${upper.name} color sample">
                 </label>
             `);
@@ -293,11 +296,15 @@ orderApp.moveSections = () => {
         if (e != 0)
             $(this).hide();
     });
+
+    $(".nextBtn").attr('disabled', 'disabled');
     
     $(".nextBtn").on('click', function(){
         if ($("#orderSections section:visible").next().length != 0) {
             orderApp.highlightSelection();
+            orderApp.orderSummary();
             $("#orderSections section:visible").next().show().prev().hide();
+            $(".nextBtn").attr('disabled', 'disabled');
         }
         else {
             $("#orderSections section:visible").hide();
@@ -325,32 +332,52 @@ orderApp.clearModelChoice = () => {
 }
 
 orderApp.highlightSelection = () => {
+    $('.selectionLabel').on('click', function () {
+        $(".nextBtn").removeAttr('disabled');
+        $('.selectionLabel').css("background-color", "white");
+        $(this).css("background-color", "rgba(211, 140, 106, 0.3)");
+    });
+}
 
-    $('label').on('click', function () {
-        $('label').css("background-color", "transparent")
-        $(this).css("background-color", "rgba(211, 140, 106, 0.2)");
+orderApp.orderSummary = () => {
+    $('#modelSelection input').on('click', function () {
+        orderApp.chosenStyle = $(this).val();
+        $('#selectedStyle').html(`${orderApp.chosenStyle}`)
     });
 
-}
+    $('#upperSelection input').on('click', function () {
+        chosenUpper = $(this).val();
+        $('#selectedUpper').html(`${chosenUpper}`)
+    });
 
-orderApp.inputRequired = () => {
-    // $('.formSelections').validate({
-    //        
-    //     });
-}
+    $('#topCoverSelection input').on('click', function () {
+        chosenTopCover = $(this).val();
+        $('#selectedTopCover').html(`${chosenTopCover}`)
+    });
 
-orderApp.submitHandler = () => {
+    $('#midlayerSelection input').on('click', function () {
+        chosenMidlayer = $(this).val();
+        $('#selectedMidlayer').html(`${chosenMidlayer}`)
+    });
 
+    $('#blankSelection input').on('click', function () {
+        chosenBlank = $(this).val();
+        $('#selectedBlank').html(`${chosenBlank}`)
+    });
+
+    $('#soleSelection input').on('click', function () {
+        chosenSole = $(this).val();
+        $('#selectedSole').html(`${chosenSole}`)
+    });
 }
 
 orderApp.init = () => {
     orderApp.choices();
-    orderApp.inputRequired();
     orderApp.moveSections();
-    orderApp.upperDisplay();
     orderApp.clearModelChoice();
+    orderApp.upperDisplay();
     orderApp.highlightSelection();
-    // orderApp.submitHandler();
+    orderApp.orderSummary();
 };
 
 $(function () {

@@ -55,9 +55,11 @@
                     <div id="modelSelection" class="modelSelection">
                         
                     </div>
-                    <!-- <input type="submit" class="nextBtn"> -->
-                    <button class="nextBtn" type="submit">Next</button>
+                    
                 </form>
+
+                <!-- <input type="submit" class="nextBtn"> -->
+                <button class="nextBtn" type="submit">Next</button>
                 
             </section>
     
@@ -68,10 +70,11 @@
                     <div id="upperSelection" class="modelSelection">
                         
                     </div>
-
-                    <button class="prevBtn" id="upperPrevBtn">Previous</button>
-                    <button class="nextBtn">Next</button>
                 </form>
+
+                <button class="prevBtn" id="upperPrevBtn">Previous</button>
+                <button class="nextBtn">Next</button>
+
             </section>
     
             <section>
@@ -84,6 +87,7 @@
 
                 <button class="prevBtn">Previous</button>
                 <button class="nextBtn">Next</button>
+
             </section>
     
             <section>
@@ -123,72 +127,90 @@
             </section>
     
             <section>
-                <h2>Complete Order Details</h2>
-                <button class="prevBtn">Change Order</button>
                 <form action="" class="formSelections">
-                    <div>
-                        <label for="company">Company:</label>
-                        <input type="text" id="company" placeholder="" name="name" required>
-    
-                        <label for="addressStreet">Street:</label>
-                        <input type="text" id="addressStreet" placeholder="" name="name" required>
-    
-                        <label for="addressCity">City:</label>
-                        <input type="text" id="addressCity" placeholder="" name="name" required>
-    
-                        <label for="addressProvince">Province:</label>
-                        <input type="text" id="addressProvince" placeholder="" name="name" required>
-    
-                        <label for="addressPostalCode">Postal Code:</label>
-                        <input type="text" id="addressPostalCode" placeholder="" name="name" required>
+                    <div class="orderSummary">
+                        <h2>Your Order Summary</h2>
+                
+                        <p>Model: <span id="selectedStyle"></span></p>
+                        <p>Upper: <span id="selectedUpper"></span></p>
+                        <p>Top Cover: <span id="selectedTopCover"></span></p>
+                        <p>Midlayer: <span id="selectedMidlayer"></span></p>
+                        <p>Blank: <span id="selectedBlank"></span></p>
+                        <p>Sole: <span id="selectedSole"></span></p>
                     </div>
-                    
+                
+                    <button class="prevBtn">Change Order</button>
+                
+                    <div>
+                        <h2>Complete Order Details</h2>
+                
+                        <label for="company">Company:</label>
+                        <textarea id="company" placeholder="" name="name" required></textarea>
+                
+                        <label for="addressStreet">Address:</label>
+                        <textarea id="addressStreet" placeholder="" name="name" required></textarea>
+                
+                        <!-- <label for="addressStreet">Street:</label>
+                                                        <input type="text" id="addressStreet" placeholder="" name="name" required>
+                                                
+                                                        <label for="addressCity">City:</label>
+                                                        <input type="text" id="addressCity" placeholder="" name="name" required>
+                                                
+                                                        <label for="addressProvince">Province:</label>
+                                                        <input type="text" id="addressProvince" placeholder="" name="name" required>
+                                                
+                                                        <label for="addressPostalCode">Postal Code:</label>
+                                                        <input type="text" id="addressPostalCode" placeholder="" name="name" required> -->
+                    </div>
+                
                     <div>
                         <label for="patientName">Patient Name:</label>
                         <input type="text" id="patientName" placeholder="" name="name" required>
-    
+                    </div>
+                
+                    <div>
                         <label for="patientNumber">Patient Number:</label>
                         <input type="text" id="patientNumber" placeholder="" name="name" required>
-    
+                    </div>
+                
+                    <div>
                         <label for="patientDOB">Date of Birth:</label>
-                        <input type="text" id="patientDOB" placeholder="" name="name" required>
+                        <input type="date" id="patientDOB" placeholder="" name="name" required>
                     </div>
-    
+                
+                    <h3>Size:</h3>
                     <div>
-                        <label for="sandalSize">Size:</label>
-                        <select name="sandalSize" id="sandalSizeLeft">
-                            <option value="Left">Left</option>
-                        </select>
-                        <select name="sandalSize" id="sandalSizeRight">
-                            <option value="Right">Right</option>
-                        </select>
+                        <label for="sandalSizeLeft">Left:</label>
+                        <input type="number" name="sandalSizeLeft" id="sandalSizeLeft" min="34" max="48" required>
+                
+                        <label for="sandalSizeRight">Right:</label>
+                        <input type="number" name="sandalSizeRight" id="sandalSizeRight" min="34" max="48" required>
                     </div>
-    
+                
+                    <h3>Width (mm):</h3>
                     <div>
-                        <label for="sandalWidth">Width (mm):</label>
-                        <select name="sandalWidth" id="sandalWidthLeft">
-                            <option value="Left">Left</option>
-                        </select>
-                        <select name="sandalWidth" id="sandalWidthRight">
-                            <option value="Right">Right</option>
-                        </select>
+                        <label for="sandalWidthLeft">Left:</label>
+                        <input type="text" name="sandalWidthLeft" id="sandalWidthLeft" required>
+                
+                        <label for="sandalWidthRight">Right:</label>
+                        <input type="text" name="sandalWidthRight" id="sandalWidthRight" required>
                     </div>
-    
+                
+                    <h3>Extra heel lift (mm):</h3>
                     <div>
-                        <label for="sandalLift">Extra heel lift (mm):</label>
-                        <select name="sandalLift" id="sandalLiftLeft">
-                            <option value="Left">Left</option>
-                        </select>
-                        <select name="sandalLift" id="sandalLiftRight">
-                            <option value="Right">Right</option>
-                        </select>
+                        <label for="sandalLiftLeft">Left:</label>
+                        <input type="number" name="sandalLiftLeft" id="sandalSizeLeft" min="1" max="15" required>
+                
+                        <label for="sandalLiftRight">Left:</label>
+                        <input type="number" name="sandalLiftRight" id="sandalSizeRight" min="1" max="15" required>
+                
                     </div>
-    
+                
                     <div>
                         <label for="notes">Notes:</label>
                         <textarea name="notes" id="notes"></textarea>
                     </div>
-    
+                
                     <button class="orderBtn">Submit Order</button>
                 </form>
             </section>

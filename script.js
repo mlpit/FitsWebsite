@@ -103,7 +103,7 @@ app.init = () => {
     // app.clickHandler();
     setInterval('app.swapImagesWomen()', 4000);
     setInterval('app.swapImagesMen()', 4000);
-    app.videoPlay();
+    // app.videoPlay();
 };
 
 
