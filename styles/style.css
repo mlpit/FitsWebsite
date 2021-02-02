@@ -733,6 +733,10 @@ button {
   border: none;
 }
 
+.orderBody {
+  background-color: rgba(21, 105, 124, 0.1);
+}
+
 .orderh1 {
   color: #103b53;
   font-size: 5rem;
@@ -741,6 +745,7 @@ button {
 
 .formSelections {
   border: 2px solid rgba(16, 59, 83, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
   margin: 20px 0;
   padding: 20px 60px;
   -webkit-box-shadow: 0px 3px 15px rgba(16, 59, 83, 0.2);
@@ -787,7 +792,11 @@ button {
   width: 100px;
 }
 
-.testDiv {
+label {
+  background-color: white;
+}
+
+.orderMain {
   margin-top: 10vh;
   text-align: center;
 }
@@ -821,7 +830,7 @@ button {
 }
 
 video {
-  width: 400px;
+  width: 700px;
   margin-top: 30px;
   border: 2px solid rgba(16, 59, 83, 0.5);
   -webkit-box-shadow: 0px 3px 15px rgba(16, 59, 83, 0.2);

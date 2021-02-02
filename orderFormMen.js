@@ -331,6 +331,8 @@ orderApp.choices = () => {
 orderApp.upperDisplay = () => {
     $("#modelSelection input").on('click', function() {
 
+        $("#upperSelection").html('');
+
         const modelChoice = $('input[name="model"]:checked').val();
 
         const uppers = Object.values(orderApp.menChoices.upper);
@@ -340,7 +342,7 @@ orderApp.upperDisplay = () => {
             
             $('#upperSelection').append(`
                 <label>${upper.name}
-                    <input type="radio" name="upper" value=${upper.name}>
+                    <input type="radio" name="upper" value="${upper.name}">
                     <img class="radioImage" src=${upper.imageUrl} alt="${upper.name} color sample">
                 </label>
             `);
@@ -391,13 +393,14 @@ orderApp.clearModelChoice = () => {
     $('#upperPrevBtn').on('click', function () {
         $("#upperSelection").html('');
     });
+
 }
 
 orderApp.highlightSelection = () => {
     $('label').on('click', function () {
         $(".nextBtn").removeAttr('disabled');
-        $('label').css("background-color", "transparent");
-        $(this).css("background-color", "rgba(211, 140, 106, 0.2)");
+        $('label').css("background-color", "white");
+        $(this).css("background-color", "rgba(211, 140, 106, 0.3)");
     });
 }
 
@@ -448,11 +451,10 @@ orderApp.submitHandler = () => {
 }
 
 orderApp.init = () => {
-    orderApp.choices();
-    
+    orderApp.choices();    
     orderApp.moveSections();
-    orderApp.upperDisplay();
     orderApp.clearModelChoice();
+    orderApp.upperDisplay();
     orderApp.highlightSelection();
     orderApp.orderSummary();
     orderApp.inputRequired();
