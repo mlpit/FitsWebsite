@@ -585,6 +585,8 @@ h1 {
 
 .womenStyles img,
 .menStyles img {
+  -o-object-fit: cover;
+     object-fit: cover;
   display: none;
   width: 400px;
   height: 300px;
@@ -775,8 +777,8 @@ button {
 .modelSelection {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(150px, 200px))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+  -ms-grid-columns: (minmax(100px, 170px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100px, 170px));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -878,7 +880,7 @@ button:disabled {
 }
 
 .formSelections h2 {
-  margin-bottom: 15px;
+  margin: 20px 0 15px 0;
 }
 
 .formSelections h3 {
@@ -896,6 +898,58 @@ button:disabled {
 .formSelections textarea {
   width: 300px;
   height: 100px;
+}
+
+.orderSummary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.orderSummary div {
+  margin: 0 15px;
+  width: 150px;
+  height: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.orderSummary div:first-of-type {
+  width: 350px;
+}
+
+.orderSummary img {
+  width: 100px;
+  margin: 5px auto;
+}
+
+.imageSummary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /* Portrait tablet and small desktops */

@@ -34,7 +34,7 @@
 
 .modelSelection {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 170px));
     justify-content: center;
     gap: 20px;
     label {
@@ -111,7 +111,7 @@ button:disabled {
 .formSelections {
     text-align: center;
     h2 {
-        margin-bottom: 15px;
+        margin: 20px 0 15px 0;
     }
     h3 {
         margin: 15px 0 10px 0;
@@ -126,4 +126,32 @@ button:disabled {
         width: 300px;
         height: 100px;
     }
+}
+
+.orderSummary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    div {
+        margin: 0 15px;
+        width: 150px;
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    div:first-of-type {
+        width: 350px;
+    }
+    img {
+        width: 100px;
+        margin: 5px auto;
+    }
+}
+
+.imageSummary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

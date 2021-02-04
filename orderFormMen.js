@@ -320,6 +320,7 @@ orderApp.orderSummary = () => {
         orderApp.chosenSole = $(this).val();
         $('#selectedSole').html(`${orderApp.chosenSole}`)
     });
+
 }
 
 orderApp.preview = () => {
@@ -348,6 +349,9 @@ orderApp.preview = () => {
         $('#modelPreview').html(`<img src="./assets/Men/${orderApp.chosenStyle}/${orderApp.chosenUpper}/${orderApp.chosenBlank}.png" alt="">`);
     });
 
+    $('#topCoverSummary').html(`<img src="./assets/Top_Cover/${orderApp.chosenTopCover}.png" alt="">`);
+
+    $('#soleSummary').html(`<img src="./assets/Bottom_Sole/${orderApp.chosenSole}.png" alt="">`);
 }
 
 orderApp.init = () => {

@@ -24,7 +24,7 @@ orderApp.womenChoices = {
     "upper": {
         1: {
             "name":"Anthracite Leather",
-            "imageUrl": "./assets/Uppers/Women/Anthracite Leather.png",
+            "imageUrl": "./assets/Uppers/Women/leather_anthra.png",
             "availableModel": ["Teenslipper", "Teenslipper Vegan", "Tweeband Sandal",  "Drieband Sandal"]
         }, 
         2: {
@@ -55,7 +55,7 @@ orderApp.womenChoices = {
         6: {
             "name":"Salmon Leather",
             "imageUrl": "./assets/Uppers/Women/leather_salmon.png",
-            "availableModel": ["Teenslipper", "Tweeband Sandal"]
+            "availableModel": ["Teenslipper"]
         },
         7: {
             "name":"White Leather",
@@ -118,52 +118,52 @@ orderApp.womenChoices = {
 orderApp.generalChoices = {
     "topCover": {
         1: {
-            "name":"Flexline Black",
-            "imageUrl": "./assets/Top_Cover/flexline_black.png"
+            "name":"Black Flexline",
+            "imageUrl": "./assets/Top_Cover/Black Flexline.png"
         },
         2: {
-            "name":"Leather Beige",
-            "imageUrl": "./assets/Top_Cover/leather_beige.png"
+            "name":"Beige Leather",
+            "imageUrl": "./assets/Top_Cover/Beige Leather.png"
         },
         3: {
-            "name":"Leather Brown",
-            "imageUrl": "./assets/Top_Cover/leather_brown.png"
+            "name":"Brown Leather",
+            "imageUrl": "./assets/Top_Cover/Brown Leather.png"
         },
         4: {
-            "name":"Leather Grey",
-            "imageUrl": "./assets/Top_Cover/leather_grey.png"
+            "name":"Grey Leather",
+            "imageUrl": "./assets/Top_Cover/Grey Leather.png"
         },
         5: {
-            "name":"Microfiber Beige",
-            "imageUrl": "./assets/Top_Cover/micro_beige.png"
+            "name":"Beige Microfiber",
+            "imageUrl": "./assets/Top_Cover/Beige Microfiber.png"
         },
         6: {
-            "name":"Microfiber Black",
-            "imageUrl": "./assets/Top_Cover/micro_black.png"
+            "name":"Black Microfiber",
+            "imageUrl": "./assets/Top_Cover/Black Microfiber.png"
         },
         7: {
-            "name":"Microfiber Brown",
-            "imageUrl": "./assets/Top_Cover/micro_brown.png"
+            "name":"Brown Microfiber",
+            "imageUrl": "./assets/Top_Cover/Brown Microfiber.png"
         },
         8: {
-            "name":"Microfiber Grey",
-            "imageUrl": "./assets/Top_Cover/micro_grey.png"
+            "name":"Grey Microfiber",
+            "imageUrl": "./assets/Top_Cover/Grey Microfiber.png"
         },
         9: {
-            "name":"Suede Beige",
-            "imageUrl": "./assets/Top_Cover/suede_beige.png"
+            "name":"Beige Suede",
+            "imageUrl": "./assets/Top_Cover/Beige Suede.png"
         },
         10: {
-            "name":"Suede Black",
-            "imageUrl": "./assets/Top_Cover/suede_black.png"
+            "name":"Black Suede",
+            "imageUrl": "./assets/Top_Cover/Black Suede.png"
         },
         11: {
-            "name":"Suede Brown",
-            "imageUrl": "./assets/Top_Cover/suede_brown.png"
+            "name":"Brown Suede",
+            "imageUrl": "./assets/Top_Cover/Brown Suede.png"
         },
         12: {
-            "name":"Suede Grey",
-            "imageUrl": "./assets/Top_Cover/suede_grey.png"
+            "name":"Grey Suede",
+            "imageUrl": "./assets/Top_Cover/Grey Suede.png"
         }
     },
     "midlayer": {
@@ -221,7 +221,7 @@ orderApp.choices = () => {
         $('#modelSelection').append(`
             <label class="selectionLabel">${model.name}
                 <input type="radio" name="model" value="${model.name}">
-                <img class="radioImage" src=${model.imageUrl} alt="${model.name} sandal">
+                <img class="radioImage" src="${model.imageUrl}" alt="${model.name} sandal">
             </label>
         `);
     });
@@ -232,7 +232,7 @@ orderApp.choices = () => {
         $('#topCoverSelection').append(`
             <label class="selectionLabel">${topCover.name}
                 <input type="radio" name="upper" value="${topCover.name}">
-                <img class="radioImage" src=${topCover.imageUrl} alt="${topCover.name} color sample">
+                <img class="radioImage" src="${topCover.imageUrl}" alt="${topCover.name} color sample">
             </label>
         `);
     });
@@ -243,7 +243,7 @@ orderApp.choices = () => {
         $('#midlayerSelection').append(`
             <label class="selectionLabel">${midlayer.name}
                 <input type="radio" name="upper" value="${midlayer.name}">
-                <img class="radioImage" src=${midlayer.imageUrl} alt="${midlayer.name} color sample">
+                <img class="radioImage" src="${midlayer.imageUrl}" alt="${midlayer.name} color sample">
             </label>
         `);
     });
@@ -254,7 +254,7 @@ orderApp.choices = () => {
         $('#blankSelection').append(`
             <label class="selectionLabel">${blank.name}
                 <input type="radio" name="upper" value="${blank.name}">
-                <img class="radioImage" src=${blank.imageUrl} alt="${blank.name} color sample">
+                <img class="radioImage" src="${blank.imageUrl}" alt="${blank.name} color sample">
             </label>
         `);
     });
@@ -265,7 +265,7 @@ orderApp.choices = () => {
         $('#soleSelection').append(`
             <label class="selectionLabel">${bottomSole.name}
                 <input type="radio" name="upper" value="${bottomSole.name}">
-                <img class="radioImage" src=${bottomSole.imageUrl} alt="${bottomSole.name} color sample">
+                <img class="radioImage" src="${bottomSole.imageUrl}" alt="${bottomSole.name} color sample">
             </label>
         `);
     });
@@ -349,17 +349,24 @@ orderApp.highlightSelection = () => {
 orderApp.orderSummary = () => {
     $('#modelSelection input').on('click', function () {
         orderApp.chosenStyle = $(this).val();
-        $('#selectedStyle').html(`${orderApp.chosenStyle}`)
+        $('#modelPreview').html(`<img src="./assets/Womens/${orderApp.chosenStyle}.png" alt="">`);
+        $('#selectedStyle').html(`${orderApp.chosenStyle}`);
     });
 
     $('#upperSelection input').on('click', function () {
         orderApp.chosenUpper = $(this).val();
-        $('#selectedUpper').html(`${orderApp.chosenUpper}`)
+        $('#modelPreview').html(`<img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/Black EVA.png" alt="">`);
+        $('#selectedUpper').html(`${orderApp.chosenUpper}`);
     });
 
     $('#topCoverSelection input').on('click', function () {
         orderApp.chosenTopCover = $(this).val();
-        $('#selectedTopCover').html(`${orderApp.chosenTopCover}`)
+        $('#topCoverHidden').show();
+        $('#selectedTopCover').html(`${orderApp.chosenTopCover}`);
+        $('#topCoverSummary').html(`
+        <h3>${orderApp.chosenTopCover} Top Cover</h3>
+        <img src="./assets/Top_Cover/${orderApp.chosenTopCover}.png" alt="${orderApp.chosenTopCover} color sample">
+        `);
     });
 
     $('#midlayerSelection input').on('click', function () {
@@ -367,46 +374,25 @@ orderApp.orderSummary = () => {
         $('#selectedMidlayer').html(`${orderApp.chosenMidlayer}`)
     });
 
-    $('#blankSelection input').on('click', function () {
-        orderApp.chosenBlank = $(this).val();
-        $('#selectedBlank').html(`${orderApp.chosenBlank}`)
-    });
-
-    $('#soleSelection input').on('click', function () {
-        orderApp.chosenSole = $(this).val();
-        $('#selectedSole').html(`${orderApp.chosenSole}`)
-    });
-}
-
-orderApp.preview = () => {
-
-    $('#modelSelection input').on('click', function () {
-        $('#modelPreview').html(`<img src="./assets/Womens/${orderApp.chosenStyle}.png" alt="">`);
-        console.log(`<img src="./assets/Womens/${orderApp.chosenStyle}.png" alt="">`);
-    });
-
-    $('#upperSelection').on('click', function () {
-        $('#modelPreview').html(`<img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/Black EVA.png" alt="">`);
-
-        console.log(`<img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/Black EVA.png" alt="">`);
-    });
-
-    $('#topCoverSelection input').on('click', function () {
-        $('#topCoverHidden').show();
-    });
-
     $('input[value="Cushion Black 3mm"]').on('click', function () {
         $('#midlayerHidden').show();
     });
 
-    $('#soleSelection input').on('click', function () {
-        $('#bottomSoleHidden').show();
-    });
-
     $('#blankSelection input').on('click', function () {
+        orderApp.chosenBlank = $(this).val();
         $('#modelPreview').html(`<img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/${orderApp.chosenBlank}.png" alt="">`);
+        $('#selectedBlank').html(`${orderApp.chosenBlank}`);
     });
 
+    $('#soleSelection input').on('click', function () {
+        orderApp.chosenSole = $(this).val();
+        $('#bottomSoleHidden').show();
+        $('#selectedSole').html(`${orderApp.chosenSole}`);
+        $('#soleSummary').html(`
+        <h3>${orderApp.chosenSole} Sole</h3>
+        <img src="./assets/Bottom_Sole/${orderApp.chosenSole}.png" alt="${orderApp.chosenSole} color sample">
+        `);
+    });
 }
 
 orderApp.init = () => {
@@ -416,7 +402,6 @@ orderApp.init = () => {
     orderApp.upperDisplay();
     orderApp.highlightSelection();
     orderApp.orderSummary();
-    orderApp.preview();
 };
 
 $(function () {
