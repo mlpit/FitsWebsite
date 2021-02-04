@@ -8,6 +8,16 @@
     margin-top: 100px;
 }
 
+.modelPreview {
+    display: flex;
+    place-content: center;
+    img {
+        object-fit: cover;
+        width: 500px;
+        height: 400px;
+    }
+}
+
 .formSelections {
     border: 2px solid rgba($color: $blue, $alpha: 0.5);
     background-color: rgba($color: white, $alpha: 0.5);

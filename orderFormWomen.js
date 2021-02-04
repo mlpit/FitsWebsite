@@ -333,7 +333,7 @@ orderApp.clearModelChoice = () => {
 
 orderApp.highlightSelection = () => {
     $('.selectionLabel').on('click', function () {
-        $(".nextBtn").removeAttr('disabled');
+        $('.nextBtn').removeAttr('disabled');
         $('.selectionLabel').css("background-color", "white");
         $(this).css("background-color", "rgba(211, 140, 106, 0.3)");
     });

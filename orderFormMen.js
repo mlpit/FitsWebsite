@@ -4,50 +4,50 @@ orderApp.menChoices = {
     "model": {
         1: {
             "name":"Teenslipper",
-            "imageUrl": "./assets/Men/Teenslipper/therapeutische_teenslipper_blauwleercognacaccent_1.png"
+            "imageUrl": "./assets/Men/Teenslipper.png"
         }, 
         2: {
             "name":"Tweeband Sandal",
-            "imageUrl": "./assets/Men/Tweeband_sandaal/therapeutische_tweeband_sandaal_blauwleer_1.png"
+            "imageUrl": "./assets/Men/Tweeband Sandal.png"
         },
         3: {
             "name":"Drieband Sandal",
-            "imageUrl": "./assets/Men/Drieband_sandaal/therapeutische_drieband_sandaal_zwartcrazyhorseleer_1.png"
+            "imageUrl": "./assets/Men/Drieband Sandal.png"
         } 
     },
     "upper": {
         1: {
-            "name":"Horse Black",
+            "name":"Black Horse Leather",
             "imageUrl": "./assets/Uppers/Men/horse_black.png",
             "availableModel": ["Teenslipper", "Tweeband Sandal", "Drieband Sandal"]
         }, 
         2: {
-            "name":"Horse Brown",
+            "name":"Brown Horse Leather",
             "imageUrl": "./assets/Uppers/Men/horse_brown.png",
             "availableModel": ["Teenslipper", "Tweeband Sandal", "Drieband Sandal"]
         },
         3: {
-            "name":"Leather Black",
+            "name":"Black Leather",
             "imageUrl": "./assets/Uppers/Men/leather_black.png",
             "availableModel": ["Teenslipper", "Tweeband Sandal", "Drieband Sandal"]
         },
         4: {
-            "name":"Leather Brown",
+            "name":"Brown Leather",
             "imageUrl": "./assets/Uppers/Men/leather_brown.png",
             "availableModel": ["Teenslipper", "Tweeband Sandal", "Drieband Sandal"]
         },
         5: {
-            "name":"Leather Cognac",
+            "name":"Cognac Leather",
             "imageUrl": "./assets/Uppers/Men/leather_cognac.png",
             "availableModel": ["Teenslipper", "Tweeband Sandal", "Drieband Sandal"]
         },
         6: {
-            "name":"Leather Darkblue",
+            "name":"Blue Leather",
             "imageUrl": "./assets/Uppers/Men/leather_darkblue.png",
             "availableModel": ["Teenslipper", "Tweeband Sandal", "Drieband Sandal"]
         },
         7: {
-            "name":"Leather Grey",
+            "name":"Grey Leather",
             "imageUrl": "./assets/Uppers/Men/leather_grey.png",
             "availableModel": ["Teenslipper", "Tweeband Sandal", "Drieband Sandal"]
         }
@@ -117,11 +117,11 @@ orderApp.generalChoices = {
     },
     "blank": {
         1: {
-            "name":"EVA Black",
+            "name":"Black EVA",
             "imageUrl": "./assets/Footbed/eva_black.png"
         },
         2: {
-            "name":"EVA Cork",
+            "name":"Cork EVA",
             "imageUrl": "./assets/Footbed/eva_cork.png"
         }
     },
@@ -167,7 +167,7 @@ orderApp.choices = () => {
         $('#modelSelection').append(`
             <label class="selectionLabel">${model.name}
                 <input type="radio" name="model" value="${model.name}">
-                <img class="radioImage" src=${model.imageUrl} alt="image of ${model.name} style">
+                <img class="radioImage" src="${model.imageUrl}" alt="image of ${model.name} style">
             </label>
         `);
     });
@@ -178,7 +178,7 @@ orderApp.choices = () => {
         $('#topCoverSelection').append(`
             <label class="selectionLabel">${topCover.name}
                 <input type="radio" name="upper" value="${topCover.name}">
-                <img class="radioImage" src=${topCover.imageUrl} alt="${topCover.name} color sample">
+                <img class="radioImage" src="${topCover.imageUrl}" alt="${topCover.name} color sample">
             </label>
         `);
     });
@@ -301,29 +301,49 @@ orderApp.orderSummary = () => {
     });
 
     $('#upperSelection input').on('click', function () {
-        chosenUpper = $(this).val();
-        $('#selectedUpper').html(`${chosenUpper}`)
+        orderApp.chosenUpper = $(this).val();
+        $('#selectedUpper').html(`${orderApp.chosenUpper}`)
     });
 
     $('#topCoverSelection input').on('click', function () {
-        chosenTopCover = $(this).val();
-        $('#selectedTopCover').html(`${chosenTopCover}`)
+        orderApp.chosenTopCover = $(this).val();
+        $('#selectedTopCover').html(`${orderApp.chosenTopCover}`)
     });
 
     $('#midlayerSelection input').on('click', function () {
-        chosenMidlayer = $(this).val();
-        $('#selectedMidlayer').html(`${chosenMidlayer}`)
+        orderApp.chosenMidlayer = $(this).val();
+        $('#selectedMidlayer').html(`${orderApp.chosenMidlayer}`)
     });
 
     $('#blankSelection input').on('click', function () {
-        chosenBlank = $(this).val();
-        $('#selectedBlank').html(`${chosenBlank}`)
+        orderApp.chosenBlank = $(this).val();
+        $('#selectedBlank').html(`${orderApp.chosenBlank}`)
     });
 
     $('#soleSelection input').on('click', function () {
-        chosenSole = $(this).val();
-        $('#selectedSole').html(`${chosenSole}`)
+        orderApp.chosenSole = $(this).val();
+        $('#selectedSole').html(`${orderApp.chosenSole}`)
     });
+}
+
+orderApp.preview = () => {
+    
+    $('#modelSelection').on('click', function() {
+        $('#modelPreview').html(`<img src="./assets/Men/${orderApp.chosenStyle}.png" alt="">`);
+    });
+
+    $('#upperSelection').on('click', function () {
+        $('#modelPreview').html(`<img src="./assets/Men/${orderApp.chosenStyle}/${orderApp.chosenUpper}/Black EVA.png" alt="">`);
+
+        // if an image is jpg it won't work
+    });
+
+    $('#blankSelection').on('click', function () {
+        $('#modelPreview').html(`<img src="./assets/Men/${orderApp.chosenStyle}/${orderApp.chosenUpper}/${orderApp.chosenBlank}.png" alt="">`);
+
+        console.log();
+    });
+
 }
 
 orderApp.init = () => {
@@ -332,6 +352,7 @@ orderApp.init = () => {
     orderApp.clearModelChoice();
     orderApp.upperDisplay();
     orderApp.highlightSelection();
+    orderApp.preview();
     orderApp.orderSummary();
 };
 

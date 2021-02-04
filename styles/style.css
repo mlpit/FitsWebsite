@@ -743,6 +743,20 @@ button {
   margin-top: 100px;
 }
 
+.modelPreview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+}
+
+.modelPreview img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 500px;
+  height: 400px;
+}
+
 .formSelections {
   border: 2px solid rgba(16, 59, 83, 0.5);
   background-color: rgba(255, 255, 255, 0.5);
