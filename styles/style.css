@@ -757,6 +757,12 @@ button {
   height: 400px;
 }
 
+.hiddenText {
+  display: none;
+  text-align: center;
+  color: #c31727;
+}
+
 .formSelections {
   border: 2px solid rgba(16, 59, 83, 0.5);
   background-color: rgba(255, 255, 255, 0.5);
@@ -862,6 +868,27 @@ video {
 button:disabled {
   background: #dddddd;
   cursor: default;
+}
+
+.formSelections h2 {
+  margin-bottom: 15px;
+}
+
+.formSelections h3 {
+  margin: 15px 0 10px 0;
+}
+
+.formSelections p, .formSelections div {
+  margin: 10px 0;
+}
+
+.formSelections span {
+  font-weight: 500;
+}
+
+.formSelections textarea {
+  width: 300px;
+  height: 100px;
 }
 
 /* Portrait tablet and small desktops */

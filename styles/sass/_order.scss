@@ -18,6 +18,12 @@
     }
 }
 
+.hiddenText {
+    display: none;
+    text-align: center;
+    color: $red;
+}
+
 .formSelections {
     border: 2px solid rgba($color: $blue, $alpha: 0.5);
     background-color: rgba($color: white, $alpha: 0.5);
@@ -99,4 +105,23 @@ video {
 button:disabled {
     background: #dddddd;
     cursor: default;
+}
+
+.formSelections {
+    h2 {
+        margin-bottom: 15px;
+    }
+    h3 {
+        margin: 15px 0 10px 0;
+    }
+    p, div {
+        margin: 10px 0;
+    }
+    span{
+        font-weight: 500;
+    }
+    textarea {
+        width: 300px;
+        height: 100px;
+    }
 }

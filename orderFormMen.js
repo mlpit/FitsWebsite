@@ -257,6 +257,7 @@ orderApp.moveSections = () => {
         if ($("#orderSections section:visible").next().length != 0) {
             orderApp.highlightSelection();
             orderApp.orderSummary();
+            $('.hiddenText').hide();
             $("#orderSections section:visible").next().show().prev().hide();
             $(".nextBtn").attr('disabled', 'disabled');
         }
@@ -338,10 +339,20 @@ orderApp.preview = () => {
         // if an image is jpg it won't work
     });
 
+    $('#topCoverSelection input').on('click', function () {
+        $('#topCoverHidden').show();
+    });
+
+    $('input[value="Cushion Black 3mm"]').on('click', function () {
+        $('#midlayerHidden').show();
+    });
+
+    $('#soleSelection input').on('click', function () {
+        $('#bottomSoleHidden').show();
+    });
+
     $('#blankSelection').on('click', function () {
         $('#modelPreview').html(`<img src="./assets/Men/${orderApp.chosenStyle}/${orderApp.chosenUpper}/${orderApp.chosenBlank}.png" alt="">`);
-
-        console.log();
     });
 
 }
