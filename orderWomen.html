@@ -46,7 +46,12 @@
     <main>
         <h1 class="orderh1">Custom Made Sandals</h1>
 
-        <!-- live preview of customization? PHOTOSHOP?? -->
+        <div id="modelPreview" class="modelPreview">
+        
+        </div>
+        <div id="topCoverHidden" class="hiddenText">Top cover preview not yet available.</div>
+        <div id="midlayerHidden" class="hiddenText">Midlayer preview not yet available.</div>
+        <div id="bottomSoleHidden" class="hiddenText">Bottom sole preview not yet available.</div>
 
         <div id="orderSections" class="wrapper">
             <section>
@@ -58,13 +63,12 @@
                     
                 </form>
 
-                <!-- <input type="submit" class="nextBtn"> -->
                 <button class="nextBtn" type="submit">Next</button>
                 
             </section>
     
             <section>
-                <!-- Should there be a picture epxlaining what the upper is? -->
+
                 <h2>Select Upper</h2>
                 <form action="" class="formSelections">
                     <div id="upperSelection" class="modelSelection">
@@ -199,10 +203,10 @@
                     <h3>Extra heel lift (mm):</h3>
                     <div>
                         <label for="sandalLiftLeft">Left:</label>
-                        <input type="number" name="sandalLiftLeft" id="sandalSizeLeft" min="1" max="15" required>
+                        <input type="number" name="sandalLiftLeft" id="sandalSizeLeft" min="1" max="15">
                 
-                        <label for="sandalLiftRight">Left:</label>
-                        <input type="number" name="sandalLiftRight" id="sandalSizeRight" min="1" max="15" required>
+                        <label for="sandalLiftRight">Right:</label>
+                        <input type="number" name="sandalLiftRight" id="sandalSizeRight" min="1" max="15">
                 
                     </div>
                 

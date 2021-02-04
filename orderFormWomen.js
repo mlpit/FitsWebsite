@@ -23,87 +23,92 @@ orderApp.womenChoices = {
     // some upper images names doesn't match excel sheet
     "upper": {
         1: {
-            "name":"Leather Anthracite",
-            "imageUrl": "./assets/Uppers/Women/leather_anthra.png",
+            "name":"Anthracite Leather",
+            "imageUrl": "./assets/Uppers/Women/Anthracite Leather.png",
             "availableModel": ["Teenslipper", "Teenslipper Vegan", "Tweeband Sandal",  "Drieband Sandal"]
         }, 
         2: {
-            "name":"Leather Anthracite Snake Pattern",
+            "name":"Anthracite Snake Leather",
             "imageUrl": "./assets/Uppers/Women/pattern_anthrasnake.png",
             "availableModel": ["Teenslipper", "Tweeband Sandal"]
         },
         3: {
-            "name":"Leather Black",
+            "name":"Black Leather",
             "imageUrl": "./assets/Uppers/Women/leather_black.png",
             "availableModel": ["Teenslipper", "Tweeband Sandal",  "Drieband Sandal"]
         },
-        4: {
-            "name":"Leather Blue",
+        18: {
+            "name": "Blue Leather",
             "imageUrl": "./assets/Uppers/Women/leather_blue.png",
-            "availableModel": ["Teenslipper", "Tweeband Sandal",  "Drieband Sandal"]
+            "availableModel": ["Teenslipper", "Drieband Sandal"]
         },
-        5: {
-            "name":"Leather Gold Flower Pattern",
-            "imageUrl": "./assets/Uppers/Women/leather_goldflower.png",
+        4: {
+            "name":"Blue Fantasy Leather",
+            "imageUrl": "./assets/Uppers/Women/pattern_bluefantasy.png",
             "availableModel": ["Teenslipper", "Tweeband Sandal"]
         },
+        5: {
+            "name":"Gold Leather",
+            "imageUrl": "./assets/Uppers/Women/leather_goldflower.png",
+            "availableModel": ["Teenslipper"]
+        },
         6: {
-            "name":"Leather Salmon Pink",
+            "name":"Salmon Leather",
             "imageUrl": "./assets/Uppers/Women/leather_salmon.png",
             "availableModel": ["Teenslipper", "Tweeband Sandal"]
         },
         7: {
-            "name":"Leather White",
+            "name":"White Leather",
             "imageUrl": "./assets/Uppers/Women/leather_white.png",
             "availableModel": ["Teenslipper", "Tweeband Sandal",  "Drieband Sandal"]
         },
-        8: {
-            "name":"Linen Pattern Black",
-            "imageUrl": "./assets/Uppers/Women/linen_black.png",
-            "availableModel": ["Teenslipper", "Tweeband Sandal"]
-        },
+        // 8: {
+        //     "name":"Linen Pattern Black",
+        //     "imageUrl": "./assets/Uppers/Women/linen_black.png",
+        //     "availableModel": ["Teenslipper", "Tweeband Sandal"]
+        // },
         9: {
-            "name":"Nubuck Beige",
+            "name":"Beige Nubuck",
             "imageUrl": "./assets/Uppers/Women/nubuck_beige.png",
             "availableModel": ["Drieband Sandal"]
         },
         10: {
-            "name":"Nubuck Beige Snake Pattern",
+            "name":"Beige Snake Nubuck",
             "imageUrl": "./assets/Uppers/Women/nubuck_beigesnake.png",
-            "availableModel": ["Teenslipper", "Tweeband Sandal"]
+            "availableModel": ["Teenslipper"]
         },
         11: {
-            "name":"Nubuck Grey",
+            "name":"Grey Nubuck",
             "imageUrl": "./assets/Uppers/Women/nubuck_grey.png",
             "availableModel": ["Drieband Sandal"]
         },
         12: {
-            "name":"Nubuck Grey Snake Pattern",
+            "name":"Grey Snake Nubuck",
             "imageUrl": "./assets/Uppers/Women/nubuck_greysnake.png",
-            "availableModel": ["Teenslipper", "Tweeband Sandal"]
+            "availableModel": ["Teenslipper"]
         },
         13: {
-            "name":"Nubuck Red",
+            "name":"Red Nubuck",
             "imageUrl": "./assets/Uppers/Women/nubuck_red.png",
             "availableModel": ["Drieband Sandal"]
         },
         14: {
-            "name":"Nubuck Red Miami Croco Pattern",
+            "name":"Red Miami Nubuck",
             "imageUrl": "./assets/Uppers/Women/nubuck_redmiami.png",
             "availableModel": ["Teenslipper", "Tweeband Sandal"]
         },
         15: {
-            "name":"Nubuck Yellow Miami Croco Pattern",
+            "name":"Yellow Miami Nubuck",
             "imageUrl": "./assets/Uppers/Women/nubuck_yellowmiami.png",
             "availableModel": ["Teenslipper"]
         },
         16: {
-            "name":"Silver Printed Pattern",
+            "name":"Silver Print Leather",
             "imageUrl": "./assets/Uppers/Women/print_silver.png",
             "availableModel": ["Teenslipper"]
         },
         17: {
-            "name":"Silver Printed Pattern with Flower",
+            "name":"Flower Print Leather",
             "imageUrl": "./assets/Uppers/Women/print_flower.png",
             "availableModel": ["Teenslipper"]
         }
@@ -173,11 +178,11 @@ orderApp.generalChoices = {
     },
     "blank": {
         1: {
-            "name":"EVA Black",
+            "name":"Black EVA",
             "imageUrl": "./assets/Footbed/eva_black.png"
         },
         2: {
-            "name":"EVA Cork",
+            "name":"Cork EVA",
             "imageUrl": "./assets/Footbed/eva_cork.png"
         }
     },
@@ -282,7 +287,7 @@ orderApp.upperDisplay = () => {
             $('#upperSelection').append(`
                 <label class="selectionLabel">${upper.name}
                     <input type="radio" name="upper" value="${upper.name}">
-                    <img class="radioImage" src=${upper.imageUrl} alt="${upper.name} color sample">
+                    <img class="radioImage" src="${upper.imageUrl}" alt="${upper.name} color sample">
                 </label>
             `);
         });
@@ -303,6 +308,7 @@ orderApp.moveSections = () => {
         if ($("#orderSections section:visible").next().length != 0) {
             orderApp.highlightSelection();
             orderApp.orderSummary();
+            $('.hiddenText').hide();
             $("#orderSections section:visible").next().show().prev().hide();
             $(".nextBtn").attr('disabled', 'disabled');
         }
@@ -316,6 +322,7 @@ orderApp.moveSections = () => {
     $(".prevBtn").on('click', function(){
         if ($("#orderSections section:visible").prev().length != 0) {
             $("#orderSections section:visible").prev().show().next().hide();
+            $('.hiddenText').hide();
         }
         else {
             $("#orderSections section:visible").hide();
@@ -346,29 +353,60 @@ orderApp.orderSummary = () => {
     });
 
     $('#upperSelection input').on('click', function () {
-        chosenUpper = $(this).val();
-        $('#selectedUpper').html(`${chosenUpper}`)
+        orderApp.chosenUpper = $(this).val();
+        $('#selectedUpper').html(`${orderApp.chosenUpper}`)
     });
 
     $('#topCoverSelection input').on('click', function () {
-        chosenTopCover = $(this).val();
-        $('#selectedTopCover').html(`${chosenTopCover}`)
+        orderApp.chosenTopCover = $(this).val();
+        $('#selectedTopCover').html(`${orderApp.chosenTopCover}`)
     });
 
     $('#midlayerSelection input').on('click', function () {
-        chosenMidlayer = $(this).val();
-        $('#selectedMidlayer').html(`${chosenMidlayer}`)
+        orderApp.chosenMidlayer = $(this).val();
+        $('#selectedMidlayer').html(`${orderApp.chosenMidlayer}`)
     });
 
     $('#blankSelection input').on('click', function () {
-        chosenBlank = $(this).val();
-        $('#selectedBlank').html(`${chosenBlank}`)
+        orderApp.chosenBlank = $(this).val();
+        $('#selectedBlank').html(`${orderApp.chosenBlank}`)
     });
 
     $('#soleSelection input').on('click', function () {
-        chosenSole = $(this).val();
-        $('#selectedSole').html(`${chosenSole}`)
+        orderApp.chosenSole = $(this).val();
+        $('#selectedSole').html(`${orderApp.chosenSole}`)
     });
+}
+
+orderApp.preview = () => {
+
+    $('#modelSelection input').on('click', function () {
+        $('#modelPreview').html(`<img src="./assets/Womens/${orderApp.chosenStyle}.png" alt="">`);
+        console.log(`<img src="./assets/Womens/${orderApp.chosenStyle}.png" alt="">`);
+    });
+
+    $('#upperSelection').on('click', function () {
+        $('#modelPreview').html(`<img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/Black EVA.png" alt="">`);
+
+        console.log(`<img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/Black EVA.png" alt="">`);
+    });
+
+    $('#topCoverSelection input').on('click', function () {
+        $('#topCoverHidden').show();
+    });
+
+    $('input[value="Cushion Black 3mm"]').on('click', function () {
+        $('#midlayerHidden').show();
+    });
+
+    $('#soleSelection input').on('click', function () {
+        $('#bottomSoleHidden').show();
+    });
+
+    $('#blankSelection input').on('click', function () {
+        $('#modelPreview').html(`<img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/${orderApp.chosenBlank}.png" alt="">`);
+    });
+
 }
 
 orderApp.init = () => {
@@ -378,6 +416,7 @@ orderApp.init = () => {
     orderApp.upperDisplay();
     orderApp.highlightSelection();
     orderApp.orderSummary();
+    orderApp.preview();
 };
 
 $(function () {

@@ -727,7 +727,7 @@ h1 {
 button {
   margin: 20px auto;
   padding: 5px 0;
-  width: 13rem;
+  width: 15rem;
   color: white;
   background-color: rgba(16, 59, 83, 0.8);
   border: none;
@@ -775,9 +775,12 @@ button {
 .modelSelection {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+  -ms-grid-columns: (minmax(150px, 200px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
 }
 
 .modelSelection label {
@@ -868,6 +871,10 @@ video {
 button:disabled {
   background: #dddddd;
   cursor: default;
+}
+
+.formSelections {
+  text-align: center;
 }
 
 .formSelections h2 {

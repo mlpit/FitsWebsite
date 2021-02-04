@@ -153,13 +153,6 @@ orderApp.generalChoices = {
     }
 } 
 
-// orderApp.chosenStyle = "";
-// orderApp.chosenUpper = "";
-// orderApp.chosenTopCover = "";
-// orderApp.chosenMidlayer = "";
-// orderApp.chosenBlank = "";
-// orderApp.chosenSole = "";
-
 orderApp.choices = () => {
     const models = Object.values(orderApp.menChoices.model);
 
@@ -269,8 +262,10 @@ orderApp.moveSections = () => {
     });
 
     $(".prevBtn").on('click', function(){
-        if ($("#orderSections section:visible").prev().length != 0)
+        if ($("#orderSections section:visible").prev().length != 0) {
             $("#orderSections section:visible").prev().show().next().hide();
+            $('.hiddenText').hide();
+        }
         else {
             $("#orderSections section:visible").hide();
             $("#orderSections section:last").show();
@@ -329,14 +324,12 @@ orderApp.orderSummary = () => {
 
 orderApp.preview = () => {
     
-    $('#modelSelection').on('click', function() {
+    $('#modelSelection input').on('click', function() {
         $('#modelPreview').html(`<img src="./assets/Men/${orderApp.chosenStyle}.png" alt="">`);
     });
 
     $('#upperSelection').on('click', function () {
         $('#modelPreview').html(`<img src="./assets/Men/${orderApp.chosenStyle}/${orderApp.chosenUpper}/Black EVA.png" alt="">`);
-
-        // if an image is jpg it won't work
     });
 
     $('#topCoverSelection input').on('click', function () {
@@ -351,7 +344,7 @@ orderApp.preview = () => {
         $('#bottomSoleHidden').show();
     });
 
-    $('#blankSelection').on('click', function () {
+    $('#blankSelection input').on('click', function () {
         $('#modelPreview').html(`<img src="./assets/Men/${orderApp.chosenStyle}/${orderApp.chosenUpper}/${orderApp.chosenBlank}.png" alt="">`);
     });
 
@@ -363,8 +356,8 @@ orderApp.init = () => {
     orderApp.clearModelChoice();
     orderApp.upperDisplay();
     orderApp.highlightSelection();
-    orderApp.preview();
     orderApp.orderSummary();
+    orderApp.preview();
 };
 
 $(function () {
