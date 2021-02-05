@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- NEED TO ADD GOOGLE ANAYLTICS HERE -->
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -14,8 +12,6 @@
     <meta property="og:title" content="">
     <meta property="og:description" content="">
     <meta property="og:image" content="">
-    
-    <!-- NEED TO ADD A FAVICON -->
     
     <!-- Iconify -->
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
@@ -46,166 +42,177 @@
     <main>
         <h1 class="orderh1">Custom Made Sandals</h1>
 
-        <div id="modelPreview" class="modelPreview">
+        <div class="orderContainer wrapper">
+
+            <div>
+                <div id="modelPreview" class="modelPreview">
+                
+                </div>
+    
+                <div id="topCoverHidden" class="hiddenText">Top cover preview not yet available.</div>
+                <div id="midlayerHidden" class="hiddenText">Midlayer preview not yet available.</div>
+                <div id="bottomSoleHidden" class="hiddenText">Bottom sole preview not yet available.</div>
+            </div>
+    
+            <div id="orderSections">
+                <section>
+                    <h2>Select Style</h2>
+                    <form action="" class="formSelections">
+                        <div id="modelSelection" class="modelSelection">
+                            
+                        </div>
+                    </form>
+                    <button class="nextBtn" type="submit">Next</button>
+                </section>
         
-        </div>
-        <div id="topCoverHidden" class="hiddenText">Top cover preview not yet available.</div>
-        <div id="midlayerHidden" class="hiddenText">Midlayer preview not yet available.</div>
-        <div id="bottomSoleHidden" class="hiddenText">Bottom sole preview not yet available.</div>
-
-        <div id="orderSections" class="wrapper">
-            <section>
-                <h2>Select Style</h2>
-                <form action="" class="formSelections">
-                    <div id="modelSelection" class="modelSelection">
-                        
-                    </div>
-                </form>
-                <button class="nextBtn" type="submit">Next</button>
-            </section>
+                <section>
+                    <h2>Select Upper</h2>
+                    <form action="" class="formSelections">
+                        <div id="upperSelection" class="modelSelection">
+                            
+                        </div>
+                    </form>
+                    <button class="startOverBtn">Start Over</button>
+                    <button class="prevBtn" id="upperPrevBtn">Previous</button>
+                    <button class="nextBtn">Next</button>
+                </section>
+        
+                <section>
+                    <h2>Select Top Cover</h2>
+                    <form action="" class="formSelections">
+                        <div id="topCoverSelection" class="modelSelection">
+                            
+                        </div>
+                    </form>
+                    <button class="startOverBtn">Start Over</button>
+                    <button class="prevBtn">Previous</button>
+                    <button class="nextBtn">Next</button>
+                </section>
+        
+                <section>
+                    <h2>Select Midlayer</h2>
+                    <form action="" class="formSelections">
+                        <div id="midlayerSelection" class="modelSelection">
+                            
+                        </div>
+                    </form>
+                    <button class="startOverBtn">Start Over</button>
+                    <button class="prevBtn">Previous</button>
+                    <button class="nextBtn">Next</button>
+                </section>
+        
+                <section>
+                    <h2>Select Blank</h2>
+                    <form action="" class="formSelections">
+                        <div id="blankSelection" class="modelSelection">
+                            
+                        </div>
+                    </form>
+                    <button class="startOverBtn">Start Over</button>
+                    <button class="prevBtn">Previous</button>
+                    <button class="nextBtn">Next</button>
+                </section>
+        
+                <section>
+                    <h2>Select Bottom Sole</h2>
+                    <form action="" class="formSelections">
+                        <div id="soleSelection" class="modelSelection">
+                            
+                        </div>
+                    </form>
+                    <button class="startOverBtn">Start Over</button>
+                    <button class="prevBtn">Previous</button>
+                    <button class="nextBtn">Ready to Order</button>
+                </section>
+        
+                <section>
+                    <form action="" class="formSelections">
+                        <h2>Your Order Summary</h2>
+                        <div class="orderSummary">
+                            <div>
+                                <p>Model: <span id="selectedStyle"></span></p>
+                                <p>Upper: <span id="selectedUpper"></span></p>
+                                <p>Top Cover: <span id="selectedTopCover"></span></p>
+                                <p>Midlayer: <span id="selectedMidlayer"></span></p>
+                                <p>Blank: <span id="selectedBlank"></span></p>
+                                <p>Sole: <span id="selectedSole"></span></p>
+                            </div>
     
-            <section>
-                <h2>Select Upper</h2>
-                <form action="" class="formSelections">
-                    <div id="upperSelection" class="modelSelection">
-                        
-                    </div>
-                </form>
-                <button class="prevBtn" id="upperPrevBtn">Previous</button>
-                <button class="nextBtn">Next</button>
-            </section>
+                            <div id="topCoverSummary" class="imageSummary">
     
-            <section>
-                <h2>Select Top Cover</h2>
-                <form action="" class="formSelections">
-                    <div id="topCoverSelection" class="modelSelection">
-                        
-                    </div>
-                </form>
-                <button class="prevBtn">Previous</button>
-                <button class="nextBtn">Next</button>
-            </section>
+                            </div>
     
-            <section>
-                <h2>Select Midlayer</h2>
-                <form action="" class="formSelections">
-                    <div id="midlayerSelection" class="modelSelection">
-                        
-                    </div>
-                </form>
-                <button class="prevBtn">Previous</button>
-                <button class="nextBtn">Next</button>
-            </section>
-    
-            <section>
-                <h2>Select Blank</h2>
-                <form action="" class="formSelections">
-                    <div id="blankSelection" class="modelSelection">
-                        
-                    </div>
-                </form>
-                <button class="prevBtn">Previous</button>
-                <button class="nextBtn">Next</button>
-            </section>
-    
-            <section>
-                <h2>Select Bottom Sole</h2>
-                <form action="" class="formSelections">
-                    <div id="soleSelection" class="modelSelection">
-                        
-                    </div>
-                </form>
-                <button class="prevBtn">Previous</button>
-                <button class="nextBtn">Ready to Order</button>
-            </section>
-    
-            <section>
-                <form action="" class="formSelections">
-                    <h2>Your Order Summary</h2>
-                    <div class="orderSummary">
+                            <div id="soleSummary" class="imageSummary">
+                            
+                            </div>
+                        </div>
+                        <button class="prevBtn">Change Order</button>
+                    
+                        <h2>Complete Order Details</h2>
+                        <div class="flex">
+                            <div>
+                                <label for="company">Company:</label>
+                                <textarea id="company" placeholder="" name="name" required></textarea>
+                            </div>
+                    
+                            <div>
+                                <label for="address">Address:</label>
+                                <textarea id="address" placeholder="" name="name" required></textarea>
+                            </div>
+                        </div>
+                    
                         <div>
-                            <p>Model: <span id="selectedStyle"></span></p>
-                            <p>Upper: <span id="selectedUpper"></span></p>
-                            <p>Top Cover: <span id="selectedTopCover"></span></p>
-                            <p>Midlayer: <span id="selectedMidlayer"></span></p>
-                            <p>Blank: <span id="selectedBlank"></span></p>
-                            <p>Sole: <span id="selectedSole"></span></p>
+                            <label for="patientName">Patient Name:</label>
+                            <input type="text" id="patientName" placeholder="" name="name" required>
                         </div>
-
-                        <div id="topCoverSummary" class="imageSummary">
-
-                        </div>
-
-                        <div id="soleSummary" class="imageSummary">
-                        
-                        </div>
-                    </div>
-                    <button class="prevBtn">Change Order</button>
-                
-                    <h2>Complete Order Details</h2>
-                    <div class="flex">
+                    
                         <div>
-                            <label for="company">Company:</label>
-                            <textarea id="company" placeholder="" name="name" required></textarea>
+                            <label for="patientNumber">Patient Number:</label>
+                            <input type="text" id="patientNumber" placeholder="" name="name" required>
                         </div>
-                
+                    
                         <div>
-                            <label for="address">Address:</label>
-                            <textarea id="address" placeholder="" name="name" required></textarea>
+                            <label for="patientDOB">Date of Birth:</label>
+                            <input type="date" id="patientDOB" placeholder="" name="name" required>
                         </div>
-                    </div>
-                
-                    <div>
-                        <label for="patientName">Patient Name:</label>
-                        <input type="text" id="patientName" placeholder="" name="name" required>
-                    </div>
-                
-                    <div>
-                        <label for="patientNumber">Patient Number:</label>
-                        <input type="text" id="patientNumber" placeholder="" name="name" required>
-                    </div>
-                
-                    <div>
-                        <label for="patientDOB">Date of Birth:</label>
-                        <input type="date" id="patientDOB" placeholder="" name="name" required>
-                    </div>
-                
-                    <h3>Size:</h3>
-                    <div>
-                        <label for="sandalSizeLeft">Left:</label>
-                        <input type="number" name="sandalSizeLeft" id="sandalSizeLeft" min="34" max="48" required>
-                
-                        <label for="sandalSizeRight">Right:</label>
-                        <input type="number" name="sandalSizeRight" id="sandalSizeRight" min="34" max="48" required>
-                    </div>
-                
-                    <h3>Width (mm):</h3>
-                    <div>
-                        <label for="sandalWidthLeft">Left:</label>
-                        <input type="text" name="sandalWidthLeft" id="sandalWidthLeft" required>
-                
-                        <label for="sandalWidthRight">Right:</label>
-                        <input type="text" name="sandalWidthRight" id="sandalWidthRight" required>
-                    </div>
-                
-                    <h3>Extra heel lift (mm):</h3>
-                    <div>
-                        <label for="sandalLiftLeft">Left:</label>
-                        <input type="number" name="sandalLiftLeft" id="sandalSizeLeft" min="1" max="15">
-                
-                        <label for="sandalLiftRight">Right:</label>
-                        <input type="number" name="sandalLiftRight" id="sandalSizeRight" min="1" max="15">
-                    </div>
-                
-                    <div>
-                        <label for="notes">Notes:</label>
-                        <textarea name="notes" id="notes"></textarea>
-                    </div>
-                
-                    <button class="orderBtn">Submit Order</button>
-                </form>
-            </section>
-        </div>
+                    
+                        <h3>Size:</h3>
+                        <div>
+                            <label for="sandalSizeLeft">Left:</label>
+                            <input type="number" name="sandalSizeLeft" id="sandalSizeLeft" min="34" max="48" required>
+                    
+                            <label for="sandalSizeRight">Right:</label>
+                            <input type="number" name="sandalSizeRight" id="sandalSizeRight" min="34" max="48" required>
+                        </div>
+                    
+                        <h3>Width (mm):</h3>
+                        <div>
+                            <label for="sandalWidthLeft">Left:</label>
+                            <input type="text" name="sandalWidthLeft" id="sandalWidthLeft" required>
+                    
+                            <label for="sandalWidthRight">Right:</label>
+                            <input type="text" name="sandalWidthRight" id="sandalWidthRight" required>
+                        </div>
+                    
+                        <h3>Extra heel lift (mm):</h3>
+                        <div>
+                            <label for="sandalLiftLeft">Left:</label>
+                            <input type="number" name="sandalLiftLeft" id="sandalSizeLeft" min="1" max="15">
+                    
+                            <label for="sandalLiftRight">Right:</label>
+                            <input type="number" name="sandalLiftRight" id="sandalSizeRight" min="1" max="15">
+                        </div>
+                    
+                        <div>
+                            <label for="notes">Notes:</label>
+                            <textarea name="notes" id="notes"></textarea>
+                        </div>
+                    
+                        <button class="orderBtn">Submit Order</button>
+                    </form>
+                </section>
+            </div><!-- orderSections div -->
+        </div><!-- orderContainer div -->
     </main>
 
     <footer>

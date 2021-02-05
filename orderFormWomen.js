@@ -341,8 +341,8 @@ orderApp.clearModelChoice = () => {
 orderApp.highlightSelection = () => {
     $('.selectionLabel').on('click', function () {
         $('.nextBtn').removeAttr('disabled');
-        $('.selectionLabel').css("background-color", "white");
-        $(this).css("background-color", "rgba(211, 140, 106, 0.3)");
+        $('.selectionLabel').css({ "border": "3px solid transparent", "box-shadow": "2px 2px 5px rgba(0,0,0, 0)" });
+        $(this).css({ "border": "3px solid #c31727", "box-shadow": "2px 2px 5px rgba(0,0,0, 0.2)"});
     });
 }
 
@@ -395,9 +395,16 @@ orderApp.orderSummary = () => {
     });
 }
 
+orderApp.startOver = () => {
+    $('.startOverBtn').on('click', function() {
+        location.reload();
+    });
+}
+
 orderApp.init = () => {
     orderApp.choices();
     orderApp.moveSections();
+    orderApp.startOver();
     orderApp.clearModelChoice();
     orderApp.upperDisplay();
     orderApp.highlightSelection();
