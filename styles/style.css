@@ -544,6 +544,7 @@ https://flickity.metafizzy.co
 h1 {
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .homeh1 {
@@ -963,6 +964,26 @@ button:disabled {
           justify-content: space-between;
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex div {
+  margin: 10px;
+}
+
+.dynamicLogo {
+  text-transform: uppercase;
+  display: none;
+}
+
 /* Portrait tablet and small desktops */
 @media (max-width: 1201px) {
   .homeh1 {
@@ -1050,6 +1071,51 @@ button:disabled {
   .stylesBtn {
     font-size: 3rem;
   }
+  .gallery-cell {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .gallery-cell img {
+    margin: auto;
+  }
+  .gallery-cell div h2 {
+    font-size: 3.5rem;
+  }
+  .portrait-image {
+    width: 300px;
+    height: 450px;
+  }
+  .landscape-image {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 450px;
+    height: 350px;
+  }
+  .btn {
+    font-size: 3rem;
+    width: 20rem;
+  }
+  video {
+    width: 90%;
+  }
+  .modelPreview img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    width: 90%;
+    max-height: 300px;
+  }
+  .orderSummary div {
+    height: auto;
+  }
+  .imageSummary h3 {
+    margin-top: 30px;
+  }
+  .formSelections textarea,
+  .formSelections input {
+    max-width: 200px;
+  }
 }
 
 /* Landscape phones and down */
@@ -1062,5 +1128,23 @@ button:disabled {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .portrait-image,
+  .landscape-image {
+    max-width: 250px;
+    max-height: 350px;
+  }
+  .contact .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .contactInfo {
+    text-align: center;
+  }
+  .contactForm {
+    width: 90%;
+    padding: 20px 35px;
   }
 }

@@ -164,3 +164,12 @@ button:disabled {
     flex-direction: column;
     justify-content: space-between;
 }
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    div {
+        margin: 10px;
+    }
+}

@@ -85,6 +85,59 @@
     .stylesBtn {
         font-size: 3rem;
     }
+
+    // ABOUT / CAROUSEL SECTION
+    .gallery-cell {
+        flex-direction: column;
+        img {
+            margin: auto;
+        }
+        div h2 {
+            font-size: 3.5rem;
+        }
+    }
+
+    .portrait-image {
+        width: 300px;
+        height: 450px;
+    }
+
+    .landscape-image {
+        object-fit: contain;
+        width: 450px;
+        height: 350px;
+    }
+
+    // ORDER SECTION
+    .btn {
+        font-size: 3rem;
+        width: 20rem;
+    }
+
+    video {
+        width: 90%;
+    }
+
+    .modelPreview img {
+        object-fit: contain;
+        width: 90%;
+        max-height: 300px;
+    }
+
+    .orderSummary div {
+        height: auto;
+    }
+
+    .imageSummary h3 {
+        margin-top: 30px;
+    }
+
+    .formSelections {    
+        textarea,
+        input {
+            max-width: 200px;
+        }
+    }
 }
 
 /* Landscape phones and down */
@@ -96,4 +149,28 @@
     .sampleStyles {
         flex-direction: column;
     }
+
+    .portrait-image,
+    .landscape-image {
+        max-width: 250px;
+        max-height: 350px;
+    }
+
+    // CONTACT SECTION
+
+    .contact .wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .contactInfo {
+        text-align: center;
+    }
+
+    .contactForm {
+        width: 90%;
+        padding: 20px 35px;
+    }
+
+    
+
 }
