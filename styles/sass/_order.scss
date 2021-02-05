@@ -68,6 +68,11 @@
     }  
 }
 
+.modelImage {
+    object-fit: cover;
+    min-width: 200px;
+}
+
 .radioImage {
     width: 100px;
 }

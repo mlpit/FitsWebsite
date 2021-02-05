@@ -221,7 +221,7 @@ orderApp.choices = () => {
         $('#modelSelection').append(`
             <label class="selectionLabel">${model.name}
                 <input type="radio" name="model" value="${model.name}">
-                <img class="radioImage" src="${model.imageUrl}" alt="${model.name} sandal">
+                <img class="radioImage modelImage" src="${model.imageUrl}" alt="${model.name} sandal">
             </label>
         `);
     });
