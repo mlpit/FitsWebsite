@@ -24,7 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
-<body class="orderBody">
+<body class="tealBkgd">
     <header>
         <nav class="navBar">
             <a href="" class="logo"></a>
@@ -57,27 +57,20 @@
             <section>
                 <h2>Select Style</h2>
                 <form action="" class="formSelections">
-
                     <div id="modelSelection" class="modelSelection">
 
-                    </div>
-
-                    
-                    
+                    </div>    
                 </form>
-
                 <button class="nextBtn">Next</button>
             </section>
     
             <section>
-
                 <h2>Select Upper</h2>
                 <form action="" class="formSelections">
                     <div id="upperSelection" class="modelSelection">
                         <img src="./assets/Men/Drieband Sandal/Black Horse Leather/Black EVA.png" alt="">
                     </div>
                 </form>
-
                 <button class="prevBtn" id="upperPrevBtn">Previous</button>
                 <button class="nextBtn">Next</button>
             </section>
@@ -101,7 +94,6 @@
                         
                     </div>
                 </form>
-
                 <button class="prevBtn">Previous</button>
                 <button class="nextBtn">Next</button>
             </section>
@@ -113,7 +105,6 @@
                         
                     </div>
                 </form>
-
                 <button class="prevBtn">Previous</button>
                 <button class="nextBtn">Next</button>
             </section>
@@ -125,24 +116,31 @@
                         
                     </div>
                 </form>
-
                 <button class="prevBtn">Previous</button>
                 <button class="nextBtn">Ready to Order</button>
             </section>
     
             <section>
                 <form action="" class="formSelections">
+                    <h2>Your Order Summary</h2>
                     <div class="orderSummary">
-                        <h2>Your Order Summary</h2>
+                        <div>
+                            <p>Model: <span id="selectedStyle"></span></p>
+                            <p>Upper: <span id="selectedUpper"></span></p>
+                            <p>Top Cover: <span id="selectedTopCover"></span></p>
+                            <p>Midlayer: <span id="selectedMidlayer"></span></p>
+                            <p>Blank: <span id="selectedBlank"></span></p>
+                            <p>Sole: <span id="selectedSole"></span></p>
+                        </div>
                 
-                        <p>Model: <span id="selectedStyle"></span></p>
-                        <p>Upper: <span id="selectedUpper"></span></p>
-                        <p>Top Cover: <span id="selectedTopCover"></span></p>
-                        <p>Midlayer: <span id="selectedMidlayer"></span></p>
-                        <p>Blank: <span id="selectedBlank"></span></p>
-                        <p>Sole: <span id="selectedSole"></span></p>
+                        <div id="topCoverSummary" class="imageSummary">
+                
+                        </div>
+                
+                        <div id="soleSummary" class="imageSummary">
+                
+                        </div>
                     </div>
-                
                     <button class="prevBtn">Change Order</button>
                 
                     <div>
@@ -196,7 +194,6 @@
                         
                         <label for="sandalLiftRight">Right:</label>
                         <input type="number" name="sandalLiftRight" id="sandalSizeRight" min="1" max="15">
-
                     </div>
                 
                     <div>

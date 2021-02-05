@@ -4,20 +4,20 @@ orderApp.womenChoices = {
     "model": {
         1: {
             "name":"Teenslipper",
-            "imageUrl": "./assets/Ladies/Teenslipper/therapeutische_teenslipper_antracietleer_1.png"
+            "imageUrl": "./assets/Womens/Teenslipper.png"
         }, 
         // WHAT UPPERS ARE AVAILABLE WITH VEGAN VERSION??
-        2: {
-            "name":"Teenslipper Vegan",
-            "imageUrl": "./assets/Ladies/Teenslipper_vegan/therapeutische_teenslipper_zwartveganleer_1.png"
-        },
+        // 2: {
+        //     "name":"Teenslipper Vegan",
+        //     "imageUrl": "./assets/Ladies/Teenslipper_vegan/therapeutische_teenslipper_zwartveganleer_1.png"
+        // },
         3: {
             "name":"Tweeband Sandal",
-            "imageUrl": "./assets/Ladies/Tweeband_sandaal/therapeutische_tweeband_sandaal_antracietleer_1.png"
+            "imageUrl": "./assets/Womens/Tweeband Sandal.png"
         },
         4: {
             "name":"Drieband Sandal",
-            "imageUrl": "./assets/Ladies/Drieband_sandaal/therapeutische_drieband_sandaal_antracietleer_1.png"
+            "imageUrl": "./assets/Womens/Drieband Sandal.png"
         } 
     },
     // some upper images names doesn't match excel sheet
@@ -172,7 +172,7 @@ orderApp.generalChoices = {
             "imageUrl": "./assets/Cushion/none.jpg"
         },
         2: {
-            "name":"Cushion Black 3mm",
+            "name":"Black Cushion 3mm",
             "imageUrl": "./assets/Cushion/black.png"
         }
     },
@@ -374,7 +374,7 @@ orderApp.orderSummary = () => {
         $('#selectedMidlayer').html(`${orderApp.chosenMidlayer}`)
     });
 
-    $('input[value="Cushion Black 3mm"]').on('click', function () {
+    $('input[value="Black Cushion 3mm"]').on('click', function () {
         $('#midlayerHidden').show();
     });
 

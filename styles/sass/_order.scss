@@ -1,4 +1,4 @@
-.orderBody {
+.tealBkgd {
     background-color: rgba($color: $teal, $alpha: 0.1);
 }
 
@@ -125,6 +125,15 @@ button:disabled {
     textarea {
         width: 300px;
         height: 100px;
+    }
+    label {
+        margin: 10px 0 5px 0;
+        font-weight: 500;
+    }
+    input,
+    textarea {
+        padding: 5px;
+        border: 1px solid rgba($color: $blue, $alpha: 0.3);
     }
 }
 
