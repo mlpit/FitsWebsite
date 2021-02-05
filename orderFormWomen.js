@@ -349,19 +349,32 @@ orderApp.highlightSelection = () => {
 orderApp.orderSummary = () => {
     $('#modelSelection input').on('click', function () {
         orderApp.chosenStyle = $(this).val();
-        $('#modelPreview').html(`<img src="./assets/Womens/${orderApp.chosenStyle}.png" alt="">`);
+        $('#modelPreview').html(`
+        <h3>${orderApp.chosenStyle}</h3>
+        <img src="./assets/Womens/${orderApp.chosenStyle}.png" alt="">
+        `);
         $('#selectedStyle').html(`${orderApp.chosenStyle}`);
     });
 
     $('#upperSelection input').on('click', function () {
         orderApp.chosenUpper = $(this).val();
-        $('#modelPreview').html(`<img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/Black EVA.png" alt="">`);
+        $('#modelPreview').html(`
+        <h3>${orderApp.chosenStyle}</h3>
+        <p>Upper: ${orderApp.chosenUpper}</p>
+        <img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/Black EVA.png" alt="">
+        `);
         $('#selectedUpper').html(`${orderApp.chosenUpper}`);
     });
 
     $('#topCoverSelection input').on('click', function () {
         orderApp.chosenTopCover = $(this).val();
         $('#topCoverHidden').show();
+        $('#modelPreview').html(`
+        <h3>${orderApp.chosenStyle}</h3>
+        <p>Upper: ${orderApp.chosenUpper}</p>
+        <p>Top Cover: ${orderApp.chosenTopCover} (not in preview)</p>
+        <img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/Black EVA.png" alt="">
+        `);
         $('#selectedTopCover').html(`${orderApp.chosenTopCover}`);
         $('#topCoverSummary').html(`
         <h3>${orderApp.chosenTopCover} Top Cover</h3>
@@ -371,6 +384,13 @@ orderApp.orderSummary = () => {
 
     $('#midlayerSelection input').on('click', function () {
         orderApp.chosenMidlayer = $(this).val();
+        $('#modelPreview').html(`
+        <h3>${orderApp.chosenStyle}</h3>
+        <p>Upper: ${orderApp.chosenUpper}</p>
+        <p>Top Cover: ${orderApp.chosenTopCover} (not in preview)</p>
+        <p>Midlayer: ${orderApp.chosenMidlayer}</p>
+        <img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/Black EVA.png" alt="">
+        `);
         $('#selectedMidlayer').html(`${orderApp.chosenMidlayer}`)
     });
 
@@ -380,16 +400,32 @@ orderApp.orderSummary = () => {
 
     $('#blankSelection input').on('click', function () {
         orderApp.chosenBlank = $(this).val();
-        $('#modelPreview').html(`<img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/${orderApp.chosenBlank}.png" alt="">`);
+        $('#modelPreview').html(`
+        <h3>${orderApp.chosenStyle}</h3>
+        <p>Upper: ${orderApp.chosenUpper}</p>
+        <p>Top Cover: ${orderApp.chosenTopCover} (not in preview)</p>
+        <p>Midlayer: ${orderApp.chosenMidlayer}</p>
+        <p>Blank: ${orderApp.chosenBlank}</p>
+        <img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/${orderApp.chosenBlank}.png" alt="">
+        `);
         $('#selectedBlank').html(`${orderApp.chosenBlank}`);
     });
 
     $('#soleSelection input').on('click', function () {
         orderApp.chosenSole = $(this).val();
         $('#bottomSoleHidden').show();
+        $('#modelPreview').html(`
+        <h3>${orderApp.chosenStyle}</h3>
+        <p>Upper: ${orderApp.chosenUpper}</p>
+        <p>Top Cover: ${orderApp.chosenTopCover} (not in preview)</p>
+        <p>Midlayer: ${orderApp.chosenMidlayer}</p>
+        <p>Blank: ${orderApp.chosenBlank}</p>
+        <p>Sole: ${orderApp.chosenSole} (not in preview)</p>
+        <img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/${orderApp.chosenBlank}.png" alt="">
+        `);
         $('#selectedSole').html(`${orderApp.chosenSole}`);
         $('#soleSummary').html(`
-        <h3>${orderApp.chosenSole} Sole</h3>
+        <h3>${orderApp.chosenSole} Top Cover</h3>
         <img src="./assets/Bottom_Sole/${orderApp.chosenSole}.png" alt="${orderApp.chosenSole} color sample">
         `);
     });
@@ -401,6 +437,14 @@ orderApp.startOver = () => {
     });
 }
 
+orderApp.readyBtn = () => {
+    $('#readyBtn').on('click', function () {
+        $('#modelPreview').html(`
+        <img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/${orderApp.chosenBlank}.png" alt="">
+        `);
+    });
+}
+
 orderApp.init = () => {
     orderApp.choices();
     orderApp.moveSections();
@@ -409,6 +453,7 @@ orderApp.init = () => {
     orderApp.upperDisplay();
     orderApp.highlightSelection();
     orderApp.orderSummary();
+    orderApp.readyBtn();
 };
 
 $(function () {

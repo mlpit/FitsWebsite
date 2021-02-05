@@ -43,17 +43,6 @@
         <h1 class="orderh1">Custom Made Sandals</h1>
 
         <div class="orderContainer wrapper">
-
-            <div>
-                <div id="modelPreview" class="modelPreview">
-                
-                </div>
-    
-                <div id="topCoverHidden" class="hiddenText">Top cover preview not yet available.</div>
-                <div id="midlayerHidden" class="hiddenText">Midlayer preview not yet available.</div>
-                <div id="bottomSoleHidden" class="hiddenText">Bottom sole preview not yet available.</div>
-            </div>
-    
             <div id="orderSections">
                 <section>
                     <h2>Select Style</h2>
@@ -122,7 +111,7 @@
                     </form>
                     <button class="startOverBtn">Start Over</button>
                     <button class="prevBtn">Previous</button>
-                    <button class="nextBtn">Ready to Order</button>
+                    <button class="nextBtn" id="readyBtn">Ready to Order</button>
                 </section>
         
                 <section>
@@ -146,7 +135,8 @@
                             
                             </div>
                         </div>
-                        <button class="prevBtn">Change Order</button>
+                        <button class="startOverBtn">Start Over</button>
+                        <button class="prevBtn">Previous</button>
                     
                         <h2>Complete Order Details</h2>
                         <div class="flex">
@@ -212,6 +202,17 @@
                     </form>
                 </section>
             </div><!-- orderSections div -->
+
+            <div>
+                <div id="modelPreview" class="modelPreview">
+                    <!-- dynamic preview -->
+                </div>
+            
+                <div id="topCoverHidden" class="hiddenText">Top cover preview not yet available.</div>
+                <div id="midlayerHidden" class="hiddenText">Midlayer preview not yet available.</div>
+                <div id="bottomSoleHidden" class="hiddenText">Bottom sole preview not yet available.</div>
+            </div>
+
         </div><!-- orderContainer div -->
     </main>
 
