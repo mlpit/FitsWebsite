@@ -3,53 +3,53 @@ const orderApp = {};
 orderApp.menChoices = {
     "model": {
         1: {
-            "name":"Teenslipper",
-            "imageUrl": "./assets/Men/Teenslipper.png"
+            "name":"Thong",
+            "imageUrl": "./assets/Mens/Thong.png"
         }, 
         2: {
-            "name":"Tweeband Sandal",
-            "imageUrl": "./assets/Men/Tweeband Sandal.png"
+            "name":"Twoband",
+            "imageUrl": "./assets/Mens/Twoband.png"
         },
         3: {
-            "name":"Drieband Sandal",
-            "imageUrl": "./assets/Men/Drieband Sandal.png"
+            "name":"Threeband",
+            "imageUrl": "./assets/Mens/Threeband.png"
         } 
     },
     "upper": {
         1: {
             "name":"Black Horse Leather",
             "imageUrl": "./assets/Uppers/Men/horse_black.png",
-            "availableModel": ["Teenslipper", "Tweeband Sandal", "Drieband Sandal"]
+            "availableModel": ["Thong", "Twoband", "Threeband"]
         }, 
         2: {
             "name":"Brown Horse Leather",
             "imageUrl": "./assets/Uppers/Men/horse_brown.png",
-            "availableModel": ["Teenslipper", "Tweeband Sandal", "Drieband Sandal"]
+            "availableModel": ["Thong", "Twoband", "Threeband"]
         },
         3: {
             "name":"Black Leather",
             "imageUrl": "./assets/Uppers/Men/leather_black.png",
-            "availableModel": ["Teenslipper", "Tweeband Sandal", "Drieband Sandal"]
+            "availableModel": ["Thong", "Twoband", "Threeband"]
         },
         4: {
             "name":"Brown Leather",
             "imageUrl": "./assets/Uppers/Men/leather_brown.png",
-            "availableModel": ["Teenslipper", "Tweeband Sandal", "Drieband Sandal"]
+            "availableModel": ["Thong", "Twoband", "Threeband"]
         },
         5: {
             "name":"Cognac Leather",
             "imageUrl": "./assets/Uppers/Men/leather_cognac.png",
-            "availableModel": ["Teenslipper", "Tweeband Sandal", "Drieband Sandal"]
+            "availableModel": ["Thong", "Twoband", "Threeband"]
         },
         6: {
             "name":"Blue Leather",
             "imageUrl": "./assets/Uppers/Men/leather_darkblue.png",
-            "availableModel": ["Teenslipper", "Tweeband Sandal", "Drieband Sandal"]
+            "availableModel": ["Thong", "Twoband", "Threeband"]
         },
         7: {
             "name":"Grey Leather",
             "imageUrl": "./assets/Uppers/Men/leather_grey.png",
-            "availableModel": ["Teenslipper", "Tweeband Sandal", "Drieband Sandal"]
+            "availableModel": ["Thong", "Twoband", "Threeband"]
         }
     }
 }
@@ -160,7 +160,7 @@ orderApp.choices = () => {
         $('#modelSelection').append(`
             <label class="selectionLabel">${model.name}
                 <input type="radio" name="model" value="${model.name}">
-                <img class="radioImage" src="${model.imageUrl}" alt="image of ${model.name} style">
+                <img class="radioImage modelImage" src="${model.imageUrl}" alt="image of ${model.name} style">
             </label>
         `);
     });
@@ -234,8 +234,6 @@ orderApp.upperDisplay = () => {
     
 }
 
-
-
 orderApp.moveSections = () => {
 
     $("#orderSections section").each(function(e) {
@@ -285,69 +283,135 @@ orderApp.clearModelChoice = () => {
 orderApp.highlightSelection = () => {
     $('.selectionLabel').on('click', function () {
         $('.nextBtn').removeAttr('disabled');
-        $('.selectionLabel').css("background-color", "white");
-        $(this).css("background-color", "rgba(211, 140, 106, 0.3)");
+        $('.selectionLabel').css({ "border": "3px solid transparent", "box-shadow": "2px 2px 5px rgba(0,0,0, 0)" });
+        $(this).css({ "border": "3px solid #c31727", "box-shadow": "2px 2px 5px rgba(0,0,0, 0.2)" });
     });
 }
 
 orderApp.orderSummary = () => {
     $('#modelSelection input').on('click', function () {
         orderApp.chosenStyle = $(this).val();
-        $('#modelPreview').html(`<img src="./assets/Men/${orderApp.chosenStyle}.png" alt="">`);
-        $('#selectedStyle').html(`${orderApp.chosenStyle}`)
-    });
 
-    $('#upperSelection input').on('click', function () {
-        orderApp.chosenUpper = $(this).val();
-        $('#modelPreview').html(`<img src="./assets/Men/${orderApp.chosenStyle}/${orderApp.chosenUpper}/Black EVA.png" alt="">`);
-        $('#selectedUpper').html(`${orderApp.chosenUpper}`)
-    });
-
-    $('#topCoverSelection input').on('click', function () {
-        orderApp.chosenTopCover = $(this).val();
-        $('#topCoverHidden').show();
-        $('#selectedTopCover').html(`${orderApp.chosenTopCover}`);
-        $('#topCoverSummary').html(`
-        <h3>${orderApp.chosenTopCover} Top Cover</h3>
-        <img src="./assets/Top_Cover/${orderApp.chosenTopCover}.png" alt="${orderApp.chosenTopCover} color sample">
+        $('#modelPreview').html(`
+        <h3>Mens's ${orderApp.chosenStyle} Sandal</h3>
+        <img src="./assets/Mens/${orderApp.chosenStyle}.png" alt="">
         `);
     });
 
-    $('#midlayerSelection input').on('click', function () {
-        orderApp.chosenMidlayer = $(this).val();
-        $('#selectedMidlayer').html(`${orderApp.chosenMidlayer}`)
+    $('#upperSelection label').on('click', function () {
+        orderApp.chosenUpper = $('input', this).val();
+        orderApp.chosenUpperUrl = $('img', this).attr('src');
+
+        $('#modelPreview').html(`
+        <h3>Men's ${orderApp.chosenStyle} Sandal</h3>
+        <p>Upper: ${orderApp.chosenUpper}</p>
+        <img src="./assets/Mens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/Black EVA.png" alt="">
+        `);
+
+        $('#selectedUpper').html(`
+        <p>Upper: ${orderApp.chosenUpper}</p>
+        <img class="radioImage" src="${orderApp.chosenUpperUrl}" alt="">
+        `);
+    });
+
+    $('#topCoverSelection label').on('click', function () {
+        orderApp.chosenTopCover = $('input', this).val();
+        orderApp.chosenTopCoverUrl = $('img', this).attr('src');
+
+        $('#topCoverHidden').show();
+
+        $('#modelPreview').html(`
+        <h3>Men's ${orderApp.chosenStyle} Sandal</h3>
+        <p>Upper: ${orderApp.chosenUpper}</p>
+        <p>Top Cover: ${orderApp.chosenTopCover} (not in preview)</p>
+        <img src="./assets/Mens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/Black EVA.png" alt="">
+        `);
+
+        $('#selectedTopCover').html(`
+        <p>Top Cover: ${orderApp.chosenTopCover}</p>
+        <img class="radioImage" src="${orderApp.chosenTopCoverUrl}" alt="${orderApp.chosenTopCover} color sample">
+        `);
+    });
+
+    $('#blankSelection label').on('click', function () {
+        orderApp.chosenBlank = $('input', this).val();
+        orderApp.chosenBlankUrl = $('img', this).attr('src');
+
+        $('#modelPreview').html(`
+        <h3>Men's ${orderApp.chosenStyle} Sandal</h3>
+        <p>Upper: ${orderApp.chosenUpper}</p>
+        <p>Top Cover: ${orderApp.chosenTopCover} (not in preview)</p>
+        <p>Foodbed: ${orderApp.chosenBlank}</p>
+        <img src="./assets/Mens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/${orderApp.chosenBlank}.png" alt="">
+        `);
+
+        $('#selectedBlank').html(`
+        <p>Footbed: ${orderApp.chosenBlank}</p>
+        <img class="radioImage" src="${orderApp.chosenBlankUrl}" alt="${orderApp.chosenBlank} color sample">
+        `);
+    });
+
+    $('#soleSelection label').on('click', function () {
+        orderApp.chosenSole = $('input', this).val();
+        orderApp.chosenSoleUrl = $('img', this).attr('src');
+
+        $('#bottomSoleHidden').show();
+
+        $('#modelPreview').html(`
+        <h3>Men's ${orderApp.chosenStyle} Sandal</h3>
+        <p>Upper: ${orderApp.chosenUpper}</p>
+        <p>Top Cover: ${orderApp.chosenTopCover} (not in preview)</p>
+        <p>Footbed: ${orderApp.chosenBlank}</p>
+        <p>Sole: ${orderApp.chosenSole} (not in preview)</p>
+        <img src="./assets/Mens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/${orderApp.chosenBlank}.png" alt="">
+        `);
+
+        $('#selectedSole').html(`
+        <p>Bottom Sole: ${orderApp.chosenSole}</p>
+        <img class="radioImage" src="${orderApp.chosenSoleUrl}" alt="${orderApp.chosenSole} color sample">
+        `);
+    });
+
+    $('#midlayerSelection label').on('click', function () {
+        orderApp.chosenMidlayer = $('input', this).val();
+        orderApp.chosenMidlayerUrl = $('img', this).attr('src');
+
+        $('#selectedMidlayer').html(`
+        <p>Extra Cushion: ${orderApp.chosenMidlayer}</p>
+        <img class="radioImage" src="${orderApp.chosenMidlayerUrl}" alt="${orderApp.chosenMidlayer} color sample">
+        `);
     });
 
     $('input[value="Black Cushion 3mm"]').on('click', function () {
         $('#midlayerHidden').show();
     });
-
-    $('#blankSelection input').on('click', function () {
-        orderApp.chosenBlank = $(this).val();
-        $('#modelPreview').html(`<img src="./assets/Men/${orderApp.chosenStyle}/${orderApp.chosenUpper}/${orderApp.chosenBlank}.png" alt="">`);
-        $('#selectedBlank').html(`${orderApp.chosenBlank}`)
-    });
-
-    $('#soleSelection input').on('click', function () {
-        orderApp.chosenSole = $(this).val();
-        $('#bottomSoleHidden').show();
-        $('#selectedSole').html(`${orderApp.chosenSole}`);
-        $('#soleSummary').html(`
-        <h3>${orderApp.chosenSole} Sole</h3>
-        <img src="./assets/Bottom_Sole/${orderApp.chosenSole}.png" alt="${orderApp.chosenSole} color sample">
-        `);
-    });
-
 }
 
+orderApp.startOver = () => {
+    $('.startOverBtn').on('click', function () {
+        location.reload();
+    });
+}
+
+orderApp.readyBtn = () => {
+    $('#readyBtn').on('click', function () {
+        $('#modelPreview').html(`
+        <h3>Men's ${orderApp.chosenStyle} Sandal</h3>
+        <img src="./assets/Mens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/${orderApp.chosenBlank}.png" alt="">
+        <p>Top Cover, Bottom Sole, Extra Cushion not in preview.</p>
+        `);
+    });
+}
 
 orderApp.init = () => {
-    orderApp.choices();    
+    orderApp.choices();
     orderApp.moveSections();
+    orderApp.startOver();
     orderApp.clearModelChoice();
     orderApp.upperDisplay();
     orderApp.highlightSelection();
     orderApp.orderSummary();
+    orderApp.readyBtn();
 };
 
 $(function () {

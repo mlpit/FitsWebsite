@@ -372,8 +372,6 @@ orderApp.orderSummary = () => {
         <p>Upper: ${orderApp.chosenUpper}</p>
         <img class="radioImage" src="${orderApp.chosenUpperUrl}" alt="">
         `);
-
-
     });
 
     $('#topCoverSelection label').on('click', function () {
@@ -397,9 +395,7 @@ orderApp.orderSummary = () => {
 
     $('#blankSelection label').on('click', function () {
         orderApp.chosenBlank = $('input', this).val();
-        console.log(orderApp.chosenBlank);
         orderApp.chosenBlankUrl = $('img', this).attr('src');
-        console.log( orderApp.chosenBlankUrl );
 
         $('#modelPreview').html(`
         <h3>Women's ${orderApp.chosenStyle} Sandal</h3>
@@ -421,7 +417,7 @@ orderApp.orderSummary = () => {
 
         $('#bottomSoleHidden').show();
 
-        $('#modelPreview label').html(`
+        $('#modelPreview').html(`
         <h3>Women's ${orderApp.chosenStyle} Sandal</h3>
         <p>Upper: ${orderApp.chosenUpper}</p>
         <p>Top Cover: ${orderApp.chosenTopCover} (not in preview)</p>
@@ -443,7 +439,7 @@ orderApp.orderSummary = () => {
         $('#selectedMidlayer').html(`
         <p>Extra Cushion: ${orderApp.chosenMidlayer}</p>
         <img class="radioImage" src="${orderApp.chosenMidlayerUrl}" alt="${orderApp.chosenMidlayer} color sample">
-        `)
+        `);
     });
 
     $('input[value="Black Cushion 3mm"]').on('click', function () {
