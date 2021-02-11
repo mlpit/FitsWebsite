@@ -39,8 +39,7 @@
         </nav>
     </header>
 
-    <main>
-        
+    <main>       
         <h1 class="orderh1">Custom Made Sandals</h1>
 
         <div class="orderContainer wrapper">
@@ -100,10 +99,10 @@
                     </form>
                     <button class="startOverBtn btn">Start Over</button>
                     <button class="prevBtn btn">Previous</button>
-                    <button class="nextBtn btn">Next</button>
+                    <button class="nextBtn btn" id="readyBtn">Ready to Order</button>
                 </section>
         
-                <section>
+                <!-- <section>
                     <h2>Add Extra Cushion</h2>
                     <form action="" class="formSelections">
                         <div id="midlayerSelection" class="modelSelection">
@@ -113,7 +112,7 @@
                     <button class="startOverBtn btn">Start Over</button>
                     <button class="prevBtn btn">Previous</button>
                     <button class="nextBtn btn" id="readyBtn">Ready to Order</button>
-                </section>
+                </section> -->
 
                 <section>
                     <form action="" class="formSelections">
@@ -146,77 +145,6 @@
                         <button class="startOverBtn btn">Start Over</button>
                         <button class="prevBtn btn">Previous</button>
                     
-                        <h2>Complete Order Details</h2>
-                        <div class="flex">
-                            <div>
-                                <label for="company">Company:</label>
-                                <textarea id="company" placeholder="" name="name" required></textarea>
-                            </div>
-                    
-                            <div>
-                                <label for="address">Address:</label>
-                                <textarea id="address" placeholder="" name="name" required></textarea>
-                            </div>
-                        </div>
-                    
-                        <div>
-                            <label for="patientName">Patient Name:</label>
-                            <input type="text" id="patientName" placeholder="" name="name" required>
-                        </div>
-                    
-                        <div>
-                            <label for="patientNumber">Patient Number:</label>
-                            <input type="text" id="patientNumber" placeholder="" name="name" required>
-                        </div>
-                    
-                        <div>
-                            <label for="patientDOB">Date of Birth:</label>
-                            <input type="date" id="patientDOB" placeholder="" name="name" required>
-                        </div>
-                    
-                        <h3>Size:</h3>
-                        <div>
-                            <label for="sandalSizeLeft">Left:</label>
-                            <input type="number" name="sandalSizeLeft" id="sandalSizeLeft" min="34" max="48" required>
-                    
-                            <label for="sandalSizeRight">Right:</label>
-                            <input type="number" name="sandalSizeRight" id="sandalSizeRight" min="34" max="48" required>
-                        </div>
-                    
-                        <h3>Width (mm):</h3>
-                        <div>
-                            <label for="sandalWidthLeft">Left:</label>
-                            <input type="text" name="sandalWidthLeft" id="sandalWidthLeft" required>
-                    
-                            <label for="sandalWidthRight">Right:</label>
-                            <input type="text" name="sandalWidthRight" id="sandalWidthRight" required>
-                        </div>
-
-                        <h3>Extra elevation:</h3>
-                        <p>Sandal has a default heel height of 6mm on both sides.</p>
-                        <div>
-                            <label for="sandalLiftLeft">Left:</label>
-                            <input type="number" name="sandalLiftLeft" id="sandalSizeLeft" min="1" max="15">
-                        
-                            <label for="sandalLiftRight">Right:</label>
-                            <input type="number" name="sandalLiftRight" id="sandalSizeRight" min="1" max="15">
-                        </div>
-                    
-                        <h3>Extra heel lift (mm):</h3>
-                        <div>
-                            <label for="sandalLiftLeft">Left:</label>
-                            <input type="number" name="sandalLiftLeft" id="sandalSizeLeft" min="1" max="15">
-                    
-                            <label for="sandalLiftRight">Right:</label>
-                            <input type="number" name="sandalLiftRight" id="sandalSizeRight" min="1" max="15">
-                        </div>
-                    
-                        <div>
-                            <label for="notes">Notes:</label>
-                            <textarea name="notes" id="notes"></textarea>
-                        </div>
-                    
-                        <button class="orderBtn btn">Submit Order</button>
                     </form>
                 </section>
             </div><!-- orderSections div -->
@@ -230,8 +158,91 @@
                 <div id="midlayerHidden" class="hiddenText">Midlayer preview not yet available.</div>
                 <div id="bottomSoleHidden" class="hiddenText">Bottom sole preview not yet available.</div>
             </div>
-
         </div><!-- orderContainer div -->
+
+
+        <form class="formSelections finalForm" id="finalForm">
+            <h2>Complete Order Details</h2>
+            <div class="flex">
+                <div>
+                    <label for="company">Company:</label>
+                    <textarea id="company" placeholder="" name="name" required></textarea>
+                </div>
+            
+                <div>
+                    <label for="address">Address:</label>
+                    <textarea id="address" placeholder="" name="name" required></textarea>
+                </div>
+            </div>
+            
+            <div>
+                <label for="patientName">Patient Name:</label>
+                <input type="text" id="patientName" placeholder="" name="name" required>
+            </div>
+            
+            <div>
+                <label for="patientNumber">Patient Number:</label>
+                <input type="text" id="patientNumber" placeholder="" name="name" required>
+            </div>
+            
+            <div>
+                <label for="patientDOB">Date of Birth:</label>
+                <input type="date" id="patientDOB" placeholder="" name="name" required>
+            </div>
+            
+            <h3>Size:</h3>
+            <div>
+                <label for="sandalSizeLeft">Left:</label>
+                <input type="number" name="sandalSizeLeft" id="sandalSizeLeft" min="34" max="48" required>
+            
+                <label for="sandalSizeRight">Right:</label>
+                <input type="number" name="sandalSizeRight" id="sandalSizeRight" min="34" max="48" required>
+            </div>
+            
+            <h3>Width (mm):</h3>
+            <div>
+                <label for="sandalWidthLeft">Left:</label>
+                <input type="text" name="sandalWidthLeft" id="sandalWidthLeft" required>
+            
+                <label for="sandalWidthRight">Right:</label>
+                <input type="text" name="sandalWidthRight" id="sandalWidthRight" required>
+            </div>
+            
+            <h3>Extra cushion:</h3>
+            <div>
+                <input type="radio" name="sandalCushion" id="sandalCushionNone" required>
+                <label for="sandalCushionNone">None</label>
+            
+                <input type="radio" name="sandalCushion" id="sandalCushion3mm">
+                <label for="sandalCushion3mm">Black 3mm</label>
+            </div>
+            
+            <h3>Extra elevation:</h3>
+            <p>Sandal has a default heel height of 6mm on both sides.</p>
+            <div>
+                <label for="sandalLiftLeft">Left:</label>
+                <input type="number" name="sandalLiftLeft" id="sandalSizeLeft" min="1" max="15">
+            
+                <label for="sandalLiftRight">Right:</label>
+                <input type="number" name="sandalLiftRight" id="sandalSizeRight" min="1" max="15">
+            </div>
+            
+            <h3>Extra heel lift (mm):</h3>
+            <div>
+                <label for="sandalLiftLeft">Left:</label>
+                <input type="number" name="sandalLiftLeft" id="sandalSizeLeft" min="1" max="15">
+            
+                <label for="sandalLiftRight">Right:</label>
+                <input type="number" name="sandalLiftRight" id="sandalSizeRight" min="1" max="15">
+            </div>
+            
+            <div>
+                <label for="notes">Notes:</label>
+                <textarea name="notes" id="notes"></textarea>
+            </div>
+            
+            <button class="orderBtn btn">Submit Order</button>
+        </form>
     </main>
 
     <footer>

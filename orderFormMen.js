@@ -372,19 +372,19 @@ orderApp.orderSummary = () => {
         `);
     });
 
-    $('#midlayerSelection label').on('click', function () {
-        orderApp.chosenMidlayer = $('input', this).val();
-        orderApp.chosenMidlayerUrl = $('img', this).attr('src');
+    // $('#midlayerSelection label').on('click', function () {
+    //     orderApp.chosenMidlayer = $('input', this).val();
+    //     orderApp.chosenMidlayerUrl = $('img', this).attr('src');
 
-        $('#selectedMidlayer').html(`
-        <p>Extra Cushion: ${orderApp.chosenMidlayer}</p>
-        <img class="radioImage" src="${orderApp.chosenMidlayerUrl}" alt="${orderApp.chosenMidlayer} color sample">
-        `);
-    });
+    //     $('#selectedMidlayer').html(`
+    //     <p>Extra Cushion: ${orderApp.chosenMidlayer}</p>
+    //     <img class="radioImage" src="${orderApp.chosenMidlayerUrl}" alt="${orderApp.chosenMidlayer} color sample">
+    //     `);
+    // });
 
-    $('input[value="Black Cushion 3mm"]').on('click', function () {
-        $('#midlayerHidden').show();
-    });
+    // $('input[value="Black Cushion 3mm"]').on('click', function () {
+    //     $('#midlayerHidden').show();
+    // });
 }
 
 orderApp.startOver = () => {
@@ -400,6 +400,8 @@ orderApp.readyBtn = () => {
         <img src="./assets/Mens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/${orderApp.chosenBlank}.png" alt="">
         <p>Top Cover, Bottom Sole, Extra Cushion not in preview.</p>
         `);
+
+        $('#finalForm').show();
     });
 }
 

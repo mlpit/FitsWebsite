@@ -788,10 +788,6 @@ button {
   color: #c31727;
 }
 
-.formSelections {
-  margin: 20px 0;
-}
-
 .modelSelection {
   display: -ms-grid;
   display: grid;
@@ -899,6 +895,10 @@ video {
           box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
+.prevBtn {
+  margin-right: 10px;
+}
+
 .startOverBtn {
   background-color: rgba(195, 23, 39, 0.5);
   margin-right: 50px;
@@ -910,6 +910,7 @@ button:disabled {
 }
 
 .formSelections {
+  margin: 20px 0;
   text-align: center;
 }
 
@@ -918,7 +919,7 @@ button:disabled {
 }
 
 .formSelections h3 {
-  margin: 15px 0 10px 0;
+  margin: 30px 0 10px 0;
 }
 
 .formSelections p, .formSelections div {
@@ -978,6 +979,10 @@ button:disabled {
 
 .flex div {
   margin: 10px;
+}
+
+.finalForm {
+  display: none;
 }
 
 .dynamicLogo {

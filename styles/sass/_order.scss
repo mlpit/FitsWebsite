@@ -20,25 +20,12 @@
     align-items: center;
     justify-content: center;
     margin-top: 40px;
-    // img {
-    //     object-fit: cover;
-    //     width: 40%;
-    //     height: 400px;
-    // }
 }
 
 .hiddenText {
     display: none;
     text-align: center;
     color: $red;
-}
-
-.formSelections {
-    // border: 2px solid rgba($color: $blue, $alpha: 0.5);
-    // background-color: rgba($color: white, $alpha: 0.5);
-    margin: 20px 0;
-    // padding: 20px;
-    // box-shadow: 0px 3px 15px rgba($color: $blue, $alpha: 0.2);
 }
 
 .modelSelection {
@@ -63,7 +50,6 @@
         }
     }  
 }
-
 
 .radioImage {
     width: 100px;
@@ -97,7 +83,7 @@
 }
 
 .genderBtn:visited {
-        color: white;
+    color: white;
 }  
 
 .preview {
@@ -126,6 +112,10 @@ video {
     box-shadow: -5px 5px 5px rgba($color: black, $alpha: 0.2);
 }
 
+.prevBtn {
+    margin-right: 10px;
+}
+
 .startOverBtn {
     background-color: rgba($color: $red, $alpha: 0.5);
     margin-right: 50px;
@@ -137,12 +127,13 @@ button:disabled {
 }
 
 .formSelections {
+    margin: 20px 0;
     text-align: center;
     h2 {
         margin: 20px 0 15px 0;
     }
     h3 {
-        margin: 15px 0 10px 0;
+        margin: 30px 0 10px 0;
     }
     p, div {
         margin: 10px 0;
@@ -201,4 +192,8 @@ button:disabled {
     div {
         margin: 10px;
     }
+}
+
+.finalForm {
+    display: none;
 }

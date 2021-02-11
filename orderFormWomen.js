@@ -296,7 +296,6 @@ orderApp.upperDisplay = () => {
 }
 
 orderApp.moveSections = () => {
-
     $("#orderSections section").each(function(e) {
         if (e != 0)
             $(this).hide();
@@ -432,19 +431,19 @@ orderApp.orderSummary = () => {
         `);
     });
 
-    $('#midlayerSelection label').on('click', function () {
-        orderApp.chosenMidlayer = $('input', this).val();
-        orderApp.chosenMidlayerUrl = $('img', this).attr('src');
+    // $('#midlayerSelection label').on('click', function () {
+    //     orderApp.chosenMidlayer = $('input', this).val();
+    //     orderApp.chosenMidlayerUrl = $('img', this).attr('src');
 
-        $('#selectedMidlayer').html(`
-        <p>Extra Cushion: ${orderApp.chosenMidlayer}</p>
-        <img class="radioImage" src="${orderApp.chosenMidlayerUrl}" alt="${orderApp.chosenMidlayer} color sample">
-        `);
-    });
+    //     $('#selectedMidlayer').html(`
+    //     <p>Extra Cushion: ${orderApp.chosenMidlayer}</p>
+    //     <img class="radioImage" src="${orderApp.chosenMidlayerUrl}" alt="${orderApp.chosenMidlayer} color sample">
+    //     `);
+    // });
 
-    $('input[value="Black Cushion 3mm"]').on('click', function () {
-        $('#midlayerHidden').show();
-    });
+    // $('input[value="Black Cushion 3mm"]').on('click', function () {
+    //     $('#midlayerHidden').show();
+    // });
 }
 
 orderApp.startOver = () => {
@@ -458,8 +457,10 @@ orderApp.readyBtn = () => {
         $('#modelPreview').html(`
         <h3>Women's ${orderApp.chosenStyle} Sandal</h3>
         <img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/${orderApp.chosenBlank}.png" alt="">
-        <p>Top Cover, Bottom Sole, Extra Cushion not in preview.</p>
+        <p>Top Cover and Bottom Sole not in preview.</p>
         `);
+
+        $('#finalForm').show();
     });
 }
 
