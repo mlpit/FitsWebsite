@@ -3,21 +3,21 @@ const orderApp = {};
 orderApp.womenChoices = {
     "model": {
         1: {
-            "name":"Teenslipper",
-            "imageUrl": "./assets/Womens/Teenslipper.png"
+            "name":"Thong",
+            "imageUrl": "./assets/Womens/Thong.png"
         }, 
         // WHAT UPPERS ARE AVAILABLE WITH VEGAN VERSION??
         // 2: {
-        //     "name":"Teenslipper Vegan",
-        //     "imageUrl": "./assets/Ladies/Teenslipper_vegan/therapeutische_teenslipper_zwartveganleer_1.png"
+        //     "name":"Thong Vegan",
+        //     "imageUrl": "./assets/Ladies/Thong_vegan/therapeutische_Thong_zwartveganleer_1.png"
         // },
         3: {
-            "name":"Tweeband Sandal",
-            "imageUrl": "./assets/Womens/Tweeband Sandal.png"
+            "name":"Twoband",
+            "imageUrl": "./assets/Womens/Twoband.png"
         },
         4: {
-            "name":"Drieband Sandal",
-            "imageUrl": "./assets/Womens/Drieband Sandal.png"
+            "name":"Threeband",
+            "imageUrl": "./assets/Womens/Threeband.png"
         } 
     },
     // some upper images names doesn't match excel sheet
@@ -25,92 +25,92 @@ orderApp.womenChoices = {
         1: {
             "name":"Anthracite Leather",
             "imageUrl": "./assets/Uppers/Women/leather_anthra.png",
-            "availableModel": ["Teenslipper", "Teenslipper Vegan", "Tweeband Sandal",  "Drieband Sandal"]
+            "availableModel": ["Thong", "Thong Vegan", "Twoband",  "Threeband"]
         }, 
         2: {
             "name":"Anthracite Snake Leather",
             "imageUrl": "./assets/Uppers/Women/pattern_anthrasnake.png",
-            "availableModel": ["Teenslipper", "Tweeband Sandal"]
+            "availableModel": ["Thong", "Twoband"]
         },
         3: {
             "name":"Black Leather",
             "imageUrl": "./assets/Uppers/Women/leather_black.png",
-            "availableModel": ["Teenslipper", "Tweeband Sandal",  "Drieband Sandal"]
+            "availableModel": ["Thong", "Twoband",  "Threeband"]
         },
         18: {
             "name": "Blue Leather",
             "imageUrl": "./assets/Uppers/Women/leather_blue.png",
-            "availableModel": ["Teenslipper", "Drieband Sandal"]
+            "availableModel": ["Thong", "Threeband"]
         },
         4: {
             "name":"Blue Fantasy Leather",
             "imageUrl": "./assets/Uppers/Women/pattern_bluefantasy.png",
-            "availableModel": ["Teenslipper", "Tweeband Sandal"]
+            "availableModel": ["Thong", "Twoband"]
         },
         5: {
             "name":"Gold Leather",
             "imageUrl": "./assets/Uppers/Women/leather_goldflower.png",
-            "availableModel": ["Teenslipper"]
+            "availableModel": ["Thong"]
         },
         6: {
             "name":"Salmon Leather",
             "imageUrl": "./assets/Uppers/Women/leather_salmon.png",
-            "availableModel": ["Teenslipper"]
+            "availableModel": ["Thong"]
         },
         7: {
             "name":"White Leather",
             "imageUrl": "./assets/Uppers/Women/leather_white.png",
-            "availableModel": ["Teenslipper", "Tweeband Sandal",  "Drieband Sandal"]
+            "availableModel": ["Thong", "Twoband",  "Threeband"]
         },
         // 8: {
         //     "name":"Linen Pattern Black",
         //     "imageUrl": "./assets/Uppers/Women/linen_black.png",
-        //     "availableModel": ["Teenslipper", "Tweeband Sandal"]
+        //     "availableModel": ["Thong", "Twoband"]
         // },
         9: {
             "name":"Beige Nubuck",
             "imageUrl": "./assets/Uppers/Women/nubuck_beige.png",
-            "availableModel": ["Drieband Sandal"]
+            "availableModel": ["Threeband"]
         },
         10: {
             "name":"Beige Snake Nubuck",
             "imageUrl": "./assets/Uppers/Women/nubuck_beigesnake.png",
-            "availableModel": ["Teenslipper"]
+            "availableModel": ["Thong"]
         },
         11: {
             "name":"Grey Nubuck",
             "imageUrl": "./assets/Uppers/Women/nubuck_grey.png",
-            "availableModel": ["Drieband Sandal"]
+            "availableModel": ["Threeband"]
         },
         12: {
             "name":"Grey Snake Nubuck",
             "imageUrl": "./assets/Uppers/Women/nubuck_greysnake.png",
-            "availableModel": ["Teenslipper"]
+            "availableModel": ["Thong"]
         },
         13: {
             "name":"Red Nubuck",
             "imageUrl": "./assets/Uppers/Women/nubuck_red.png",
-            "availableModel": ["Drieband Sandal"]
+            "availableModel": ["Threeband"]
         },
         14: {
             "name":"Red Miami Nubuck",
             "imageUrl": "./assets/Uppers/Women/nubuck_redmiami.png",
-            "availableModel": ["Teenslipper", "Tweeband Sandal"]
+            "availableModel": ["Thong", "Twoband"]
         },
         15: {
             "name":"Yellow Miami Nubuck",
             "imageUrl": "./assets/Uppers/Women/nubuck_yellowmiami.png",
-            "availableModel": ["Teenslipper"]
+            "availableModel": ["Thong"]
         },
         16: {
             "name":"Silver Print Leather",
             "imageUrl": "./assets/Uppers/Women/print_silver.png",
-            "availableModel": ["Teenslipper"]
+            "availableModel": ["Thong"]
         },
         17: {
             "name":"Flower Print Leather",
             "imageUrl": "./assets/Uppers/Women/print_flower.png",
-            "availableModel": ["Teenslipper"]
+            "availableModel": ["Thong"]
         }
     }
 }
@@ -172,7 +172,7 @@ orderApp.generalChoices = {
             "imageUrl": "./assets/Cushion/none.jpg"
         },
         2: {
-            "name":"Black Cushion 3mm",
+            "name":"Black 3mm",
             "imageUrl": "./assets/Cushion/black.png"
         }
     },
@@ -351,99 +351,103 @@ orderApp.orderSummary = () => {
         orderApp.chosenStyle = $(this).val();
 
         $('#modelPreview').html(`
-        <h3>${orderApp.chosenStyle}</h3>
+        <h3>Women's ${orderApp.chosenStyle} Sandal</h3>
         <img src="./assets/Womens/${orderApp.chosenStyle}.png" alt="">
         `);
 
-        $('#selectedStyle').html(`${orderApp.chosenStyle}`);
+        // $('#selectedStyle').html(`${orderApp.chosenStyle}`);
     });
 
-    $('#upperSelection input').on('click', function () {
-        orderApp.chosenUpper = $(this).val();
+    $('#upperSelection label').on('click', function () {
+        orderApp.chosenUpper = $('input', this).val();
+        orderApp.chosenUpperUrl = $('img', this).attr('src');
 
         $('#modelPreview').html(`
-        <h3>${orderApp.chosenStyle}</h3>
+        <h3>Women's ${orderApp.chosenStyle} Sandal</h3>
         <p>Upper: ${orderApp.chosenUpper}</p>
         <img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/Black EVA.png" alt="">
         `);
 
-        $('#selectedUpper').html(`${orderApp.chosenUpper}`);
+        $('#selectedUpper').html(`
+        <p>Upper: ${orderApp.chosenUpper}</p>
+        <img class="radioImage" src="${orderApp.chosenUpperUrl}" alt="">
+        `);
+
+
     });
 
-    $('#topCoverSelection input').on('click', function () {
-        orderApp.chosenTopCover = $(this).val();
+    $('#topCoverSelection label').on('click', function () {
+        orderApp.chosenTopCover = $('input', this).val();
+        orderApp.chosenTopCoverUrl = $('img', this).attr('src');
 
         $('#topCoverHidden').show();
 
         $('#modelPreview').html(`
-        <h3>${orderApp.chosenStyle}</h3>
+        <h3>Women's ${orderApp.chosenStyle} Sandal</h3>
         <p>Upper: ${orderApp.chosenUpper}</p>
         <p>Top Cover: ${orderApp.chosenTopCover} (not in preview)</p>
         <img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/Black EVA.png" alt="">
         `);
 
-        $('#selectedTopCover').html(`${orderApp.chosenTopCover}`);
-
-        $('#topCoverSummary').html(`
-        <h3>${orderApp.chosenTopCover} Top Cover</h3>
-        <img src="./assets/Top_Cover/${orderApp.chosenTopCover}.png" alt="${orderApp.chosenTopCover} color sample">
+        $('#selectedTopCover').html(`
+        <p>Top Cover: ${orderApp.chosenTopCover}</p>
+        <img class="radioImage" src="${orderApp.chosenTopCoverUrl}" alt="${orderApp.chosenTopCover} color sample">
         `);
     });
 
-    $('#midlayerSelection input').on('click', function () {
-        orderApp.chosenMidlayer = $(this).val();
+    $('#blankSelection label').on('click', function () {
+        orderApp.chosenBlank = $('input', this).val();
+        console.log(orderApp.chosenBlank);
+        orderApp.chosenBlankUrl = $('img', this).attr('src');
+        console.log( orderApp.chosenBlankUrl );
 
         $('#modelPreview').html(`
-        <h3>${orderApp.chosenStyle}</h3>
+        <h3>Women's ${orderApp.chosenStyle} Sandal</h3>
         <p>Upper: ${orderApp.chosenUpper}</p>
         <p>Top Cover: ${orderApp.chosenTopCover} (not in preview)</p>
-        <p>Midlayer: ${orderApp.chosenMidlayer}</p>
-        <img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/Black EVA.png" alt="">
-        `);
-
-        $('#selectedMidlayer').html(`${orderApp.chosenMidlayer}`)
-    });
-
-    $('input[value="Black Cushion 3mm"]').on('click', function () {
-        $('#midlayerHidden').show();
-    });
-
-    $('#blankSelection input').on('click', function () {
-        orderApp.chosenBlank = $(this).val();
-
-        $('#modelPreview').html(`
-        <h3>${orderApp.chosenStyle}</h3>
-        <p>Upper: ${orderApp.chosenUpper}</p>
-        <p>Top Cover: ${orderApp.chosenTopCover} (not in preview)</p>
-        <p>Midlayer: ${orderApp.chosenMidlayer}</p>
-        <p>Blank: ${orderApp.chosenBlank}</p>
+        <p>Foodbed: ${orderApp.chosenBlank}</p>
         <img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/${orderApp.chosenBlank}.png" alt="">
         `);
 
-        $('#selectedBlank').html(`${orderApp.chosenBlank}`);
+        $('#selectedBlank').html(`
+        <p>Footbed: ${orderApp.chosenBlank}</p>
+        <img class="radioImage" src="${orderApp.chosenBlankUrl}" alt="${orderApp.chosenBlank} color sample">
+        `);
     });
 
-    $('#soleSelection input').on('click', function () {
-        orderApp.chosenSole = $(this).val();
+    $('#soleSelection label').on('click', function () {
+        orderApp.chosenSole = $('input', this).val();
+        orderApp.chosenSoleUrl = $('img', this).attr('src');
 
         $('#bottomSoleHidden').show();
 
-        $('#modelPreview').html(`
-        <h3>${orderApp.chosenStyle}</h3>
+        $('#modelPreview label').html(`
+        <h3>Women's ${orderApp.chosenStyle} Sandal</h3>
         <p>Upper: ${orderApp.chosenUpper}</p>
         <p>Top Cover: ${orderApp.chosenTopCover} (not in preview)</p>
-        <p>Midlayer: ${orderApp.chosenMidlayer}</p>
-        <p>Blank: ${orderApp.chosenBlank}</p>
+        <p>Footbed: ${orderApp.chosenBlank}</p>
         <p>Sole: ${orderApp.chosenSole} (not in preview)</p>
         <img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/${orderApp.chosenBlank}.png" alt="">
         `);
 
-        $('#selectedSole').html(`${orderApp.chosenSole}`);
-
-        $('#soleSummary').html(`
-        <h3>${orderApp.chosenSole} Sole</h3>
-        <img src="./assets/Bottom_Sole/${orderApp.chosenSole}.png" alt="${orderApp.chosenSole} color sample">
+        $('#selectedSole').html(`
+        <p>Bottom Sole: ${orderApp.chosenSole}</p>
+        <img class="radioImage" src="${orderApp.chosenSoleUrl}" alt="${orderApp.chosenSole} color sample">
         `);
+    });
+
+    $('#midlayerSelection label').on('click', function () {
+        orderApp.chosenMidlayer = $('input', this).val();
+        orderApp.chosenMidlayerUrl = $('img', this).attr('src');
+
+        $('#selectedMidlayer').html(`
+        <p>Extra Cushion: ${orderApp.chosenMidlayer}</p>
+        <img class="radioImage" src="${orderApp.chosenMidlayerUrl}" alt="${orderApp.chosenMidlayer} color sample">
+        `)
+    });
+
+    $('input[value="Black Cushion 3mm"]').on('click', function () {
+        $('#midlayerHidden').show();
     });
 }
 
@@ -456,7 +460,9 @@ orderApp.startOver = () => {
 orderApp.readyBtn = () => {
     $('#readyBtn').on('click', function () {
         $('#modelPreview').html(`
+        <h3>Women's ${orderApp.chosenStyle} Sandal</h3>
         <img src="./assets/Womens/${orderApp.chosenStyle}/${orderApp.chosenUpper}/${orderApp.chosenBlank}.png" alt="">
+        <p>Top Cover, Bottom Sole, Extra Cushion not in preview.</p>
         `);
     });
 }

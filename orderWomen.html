@@ -40,6 +40,7 @@
     </header>
 
     <main>
+        
         <h1 class="orderh1">Custom Made Sandals</h1>
 
         <div class="orderContainer wrapper">
@@ -77,9 +78,33 @@
                     <button class="prevBtn">Previous</button>
                     <button class="nextBtn">Next</button>
                 </section>
+
+                <section>
+                    <h2>Select Footbed</h2>
+                    <form action="" class="formSelections">
+                        <div id="blankSelection" class="modelSelection">
+                
+                        </div>
+                    </form>
+                    <button class="startOverBtn">Start Over</button>
+                    <button class="prevBtn">Previous</button>
+                    <button class="nextBtn">Next</button>
+                </section>
+
+                <section>
+                    <h2>Select Bottom Sole</h2>
+                    <form action="" class="formSelections">
+                        <div id="soleSelection" class="modelSelection">
+                
+                        </div>
+                    </form>
+                    <button class="startOverBtn">Start Over</button>
+                    <button class="prevBtn">Previous</button>
+                    <button class="nextBtn">Next</button>
+                </section>
         
                 <section>
-                    <h2>Select Midlayer</h2>
+                    <h2>Add Extra Cushion</h2>
                     <form action="" class="formSelections">
                         <div id="midlayerSelection" class="modelSelection">
                             
@@ -87,51 +112,34 @@
                     </form>
                     <button class="startOverBtn">Start Over</button>
                     <button class="prevBtn">Previous</button>
-                    <button class="nextBtn">Next</button>
-                </section>
-        
-                <section>
-                    <h2>Select Blank</h2>
-                    <form action="" class="formSelections">
-                        <div id="blankSelection" class="modelSelection">
-                            
-                        </div>
-                    </form>
-                    <button class="startOverBtn">Start Over</button>
-                    <button class="prevBtn">Previous</button>
-                    <button class="nextBtn">Next</button>
-                </section>
-        
-                <section>
-                    <h2>Select Bottom Sole</h2>
-                    <form action="" class="formSelections">
-                        <div id="soleSelection" class="modelSelection">
-                            
-                        </div>
-                    </form>
-                    <button class="startOverBtn">Start Over</button>
-                    <button class="prevBtn">Previous</button>
                     <button class="nextBtn" id="readyBtn">Ready to Order</button>
                 </section>
-        
+
                 <section>
                     <form action="" class="formSelections">
                         <h2>Your Order Summary</h2>
                         <div class="orderSummary">
-                            <div>
-                                <p>Model: <span id="selectedStyle"></span></p>
-                                <p>Upper: <span id="selectedUpper"></span></p>
-                                <p>Top Cover: <span id="selectedTopCover"></span></p>
-                                <p>Midlayer: <span id="selectedMidlayer"></span></p>
-                                <p>Blank: <span id="selectedBlank"></span></p>
-                                <p>Sole: <span id="selectedSole"></span></p>
+                            <div id="selectedStyle" class="imageSummary">
+                            
+                            </div>
+
+                            <div id="selectedUpper" class="imageSummary">
+                            
+                            </div>
+
+                            <div id="selectedTopCover" class="imageSummary">
+                            
                             </div>
     
-                            <div id="topCoverSummary" class="imageSummary">
+                            <div id="selectedBlank" class="imageSummary">
     
                             </div>
     
-                            <div id="soleSummary" class="imageSummary">
+                            <div id="selectedSole" class="imageSummary">
+                            
+                            </div>
+
+                            <div id="selectedMidlayer" class="imageSummary">
                             
                             </div>
                         </div>
@@ -182,6 +190,16 @@
                     
                             <label for="sandalWidthRight">Right:</label>
                             <input type="text" name="sandalWidthRight" id="sandalWidthRight" required>
+                        </div>
+
+                        <h3>Extra elevation:</h3>
+                        <p>Sandal has a default heel height of 6mm on both sides.</p>
+                        <div>
+                            <label for="sandalLiftLeft">Left:</label>
+                            <input type="number" name="sandalLiftLeft" id="sandalSizeLeft" min="1" max="15">
+                        
+                            <label for="sandalLiftRight">Right:</label>
+                            <input type="number" name="sandalLiftRight" id="sandalSizeRight" min="1" max="15">
                         </div>
                     
                         <h3>Extra heel lift (mm):</h3>
