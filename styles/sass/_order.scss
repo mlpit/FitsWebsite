@@ -3,6 +3,7 @@
 }
 
 .orderh1 {
+    text-align: center;
     color: $blue;
     font-size: 5rem;
     margin-top: 100px;
@@ -84,7 +85,7 @@
     text-align: center;
 }
 
-.btn {
+.genderBtn {
     display: inline-block;
     font-size: 5rem;
     margin: 20px;
@@ -95,7 +96,7 @@
     border: none;
 }
 
-.btn:visited {
+.genderBtn:visited {
         color: white;
 }  
 
@@ -120,9 +121,7 @@ video {
     gap: 25px;
 }
 
-.prevBtn,
-.nextBtn, 
-.startOverBtn {
+.btn {
     border-radius: 15px;
     box-shadow: -5px 5px 5px rgba($color: black, $alpha: 0.2);
 }

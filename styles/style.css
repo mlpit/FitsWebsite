@@ -542,18 +542,18 @@ https://flickity.metafizzy.co
 }
 
 h1 {
-  text-align: center;
   text-transform: uppercase;
   margin-bottom: 20px;
 }
 
 .homeh1 {
-  margin-top: 30vh;
+  margin-top: 80px;
   color: white;
-  text-shadow: 5px 5px #c31727;
-  font-size: 12rem;
-  letter-spacing: 5px;
-  width: 75%;
+  text-shadow: 3px 3px #c31727;
+  font-size: 8rem;
+  max-width: 600px;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
 }
 
 .downBtn {
@@ -568,6 +568,8 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -579,9 +581,14 @@ h1 {
 
 .styleContainer {
   position: relative;
-  width: 400px;
-  height: 300px;
-  margin: 20px 20px 100px 20px;
+  width: 300px;
+  height: 200px;
+  margin: 20px 10px 100px 10px;
+}
+
+.createImg {
+  width: 600px;
+  margin-right: 10px;
 }
 
 .womenStyles img,
@@ -589,8 +596,8 @@ h1 {
   -o-object-fit: cover;
      object-fit: cover;
   display: none;
-  width: 400px;
-  height: 300px;
+  width: 300px;
+  height: 200px;
 }
 
 .womenStyles img:active,
@@ -601,7 +608,7 @@ h1 {
 .stylesBtn {
   display: block;
   font-family: "Montserrat", sans-serif;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 500;
   -webkit-box-shadow: 0px 3px 15px rgba(16, 59, 83, 0.2);
           box-shadow: 0px 3px 15px rgba(16, 59, 83, 0.2);
@@ -664,6 +671,10 @@ h1 {
      object-fit: cover;
   width: 600px;
   height: 550px;
+}
+
+br {
+  margin-bottom: 20px;
 }
 
 /* cell number */
@@ -741,6 +752,7 @@ button {
 }
 
 .orderh1 {
+  text-align: center;
   color: #103b53;
   font-size: 5rem;
   margin-top: 100px;
@@ -837,7 +849,7 @@ button {
   text-align: center;
 }
 
-.btn {
+.genderBtn {
   display: inline-block;
   font-size: 5rem;
   margin: 20px;
@@ -848,7 +860,7 @@ button {
   border: none;
 }
 
-.btn:visited {
+.genderBtn:visited {
   color: white;
 }
 
@@ -881,9 +893,7 @@ video {
   gap: 25px;
 }
 
-.prevBtn,
-.nextBtn,
-.startOverBtn {
+.btn {
   border-radius: 15px;
   -webkit-box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.2);
           box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.2);
@@ -1084,7 +1094,7 @@ button:disabled {
     width: 450px;
     height: 350px;
   }
-  .btn {
+  .genderBtn {
     font-size: 3rem;
     width: 20rem;
   }
