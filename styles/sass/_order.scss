@@ -62,10 +62,6 @@
     border-radius: 0;
 }
 
-// .selectionLabel {
-//     background-color: white;
-// }
-
 .orderMain {
     margin-top: 10vh;
     text-align: center;
@@ -157,15 +153,9 @@ button:disabled {
 }
 
 .orderSummary {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
-    // flex-wrap: wrap;
     div {
         margin: 0 auto;
         width: 300px;
-        // height: 220px;
         display: flex;
         justify-content: space-between;
         p {
@@ -178,12 +168,6 @@ button:disabled {
     }
     
 }
-
-// .imageSummary {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-between;
-// }
 
 .flex {
     display: flex;

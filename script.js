@@ -47,6 +47,7 @@ app.navSlide = () => {
     })
 }
 
+// Women and Men buttons with alternating images
 app.swapImagesWomen = () => {
     let $active = $('#womenStyles .active');
     let $next = ($('#womenStyles .active').next().length > 0) ? $('#womenStyles .active').next() : $('#womenStyles img:first');
@@ -65,12 +66,53 @@ app.swapImagesMen = () => {
     });
 }
 
+app.sendEmail = () => {
+    const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://fitsfunction.azurewebsites.net/api/EmailOrder?code=ZNR7EUtipflirok2tNHP73O87oYKN0b7P/oXtpAt8fMv0195mW6Fnw==",
+        "method": "POST",
+        "headers": {
+            "authorization": "Bearer XXXXXXXXXXXXX",
+            "content-type": "application/json"
+        },
+        "processData": false,
+        "data": {
+            "CompanyName": "Johnson Bros Shoes",
+            "CompanyEmail": "bsmith@pedbasis.com",
+            "PatientName": "Joe Blowe",
+            "Address": "123 Main St",
+            "City": "Toronto",
+            "Prov": "ON",
+            "Postal": "M1M1A1",
+            "Email": "bsmith@mlpgroup.org",
+            "Phone": "5555555555",
+            "DOB": "1977-09-15",
+            "ShoeLeft": "13",
+            "ShoeRight": "13",
+            "Model": "Teenslipper",
+            "Upper": "Blue Fantasy Leather",
+            "TopCover": "Grey Leather",
+            "Cushion": "3mm",
+            "Footbed": "EVA Black",
+            "Elevation": "None",
+            "Sole": "Black"
+        }
+    }
+
+    $.ajax(settings).done(function (response) {
+        console.log("SendGrid Response:", response);
+    });
+    
+}
+
 app.init = () => {
     app.dynamicContent();
     app.scrollDown();
     app.navSlide();
     setInterval('app.swapImagesWomen()', 4000);
     setInterval('app.swapImagesMen()', 4000);
+    app.sendEmail();
 };
 
 
