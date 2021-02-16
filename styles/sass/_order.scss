@@ -3,6 +3,7 @@
 }
 
 .orderh1 {
+    margin-bottom: 20px;
     text-align: center;
     color: $blue;
     font-size: 5rem;
@@ -51,6 +52,11 @@
     }  
 }
 
+.selectionLabel:focus {
+    outline: none;
+    border: 3px solid $red ;
+}
+
 .radioImage {
     width: 100px;
     border-radius: 0% 75% 75% 0% / 100% 100% 100% 100%;
@@ -76,11 +82,19 @@
     color: white;
     background-color: rgba($color: $blue, $alpha: 0.8);
     border: none;
+    border-radius: 35px;
 }
 
 .genderBtn:visited {
     color: white;
 }  
+
+.genderBtn:hover,
+.genderBtn:focus {
+    outline: none;
+    transition: 0.3s;
+    transform: scale(1.1);
+}
 
 .preview {
     display: flex;
@@ -120,6 +134,10 @@ video {
 button:disabled {
     background: #dddddd;
     cursor: default;
+}
+
+button:disabled:hover {
+    transform: scale(1);
 }
 
 .formSelections {

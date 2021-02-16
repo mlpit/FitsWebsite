@@ -66,9 +66,9 @@
     }
 }
 
-h1 {
+h1,
+header p {
     text-transform: uppercase;
-    margin-bottom: 20px;
 }
 
 .homeh1 {
@@ -76,9 +76,39 @@ h1 {
     color: white;
     text-shadow: 3px 3px $red;
     font-size: 8rem;
-    // letter-spacing: 5px;
     max-width: 600px;
     align-self: baseline;
+}
+
+header p {
+    align-self: flex-end;
+    font-size: 6rem;
+    max-width: 500px;
+}
+
+header p:first-of-type {
+    color: $red;
+    animation: fadeInFirst ease 6s infinite;
+}
+
+header p:last-of-type {
+    color: white;
+    animation: fadeInSecond ease 6s infinite;
+}
+
+@keyframes fadeInFirst {
+    0% {opacity:0;}
+    5% {opacity:1;}
+    30% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes fadeInSecond {
+    0% {opacity:0;}
+    40% {opacity:0;}
+    50% {opacity:1;}
+    90% {opacity:1;}
+    100% {opacity:0;}
 }
 
 .downBtn {
@@ -87,6 +117,10 @@ h1 {
     color: white;
     border: none;
     cursor: pointer;
-    // animation: pulse 2s infinite;
 }
 
+.downBtn:hover,
+.downBtn:focus {
+    color: $red;
+    outline: none;
+}

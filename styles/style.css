@@ -245,7 +245,7 @@ html {
 }
 
 .wrapper {
-  max-width: 1280px;
+  max-width: 1400px;
   width: 95%;
   margin: 0 auto;
 }
@@ -541,9 +541,9 @@ https://flickity.metafizzy.co
   transition: all 0.3s ease-in-out;
 }
 
-h1 {
+h1,
+header p {
   text-transform: uppercase;
-  margin-bottom: 20px;
 }
 
 .homeh1 {
@@ -556,12 +556,103 @@ h1 {
       align-self: baseline;
 }
 
+header p {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: 6rem;
+  max-width: 500px;
+}
+
+header p:first-of-type {
+  color: #c31727;
+  -webkit-animation: fadeInFirst ease 6s infinite;
+          animation: fadeInFirst ease 6s infinite;
+}
+
+header p:last-of-type {
+  color: white;
+  -webkit-animation: fadeInSecond ease 6s infinite;
+          animation: fadeInSecond ease 6s infinite;
+}
+
+@-webkit-keyframes fadeInFirst {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInFirst {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeInSecond {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInSecond {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .downBtn {
   font-size: 10rem;
   background-color: transparent;
   color: white;
   border: none;
   cursor: pointer;
+}
+
+.downBtn:hover,
+.downBtn:focus {
+  color: #c31727;
+  outline: none;
 }
 
 .sampleStyles {
@@ -620,7 +711,8 @@ h1 {
   color: #103b53;
 }
 
-.stylesBtn:hover {
+.stylesBtn:hover,
+.stylesBtn:focus {
   background-color: rgba(16, 59, 83, 0.1);
   -webkit-box-shadow: 0px 3px 15px rgba(16, 59, 83, 0.8);
           box-shadow: 0px 3px 15px rgba(16, 59, 83, 0.8);
@@ -747,11 +839,21 @@ button {
   border: none;
 }
 
+button:hover,
+button:focus {
+  outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .tealBkgd {
   background-color: rgba(21, 105, 124, 0.1);
 }
 
 .orderh1 {
+  margin-bottom: 20px;
   text-align: center;
   color: #103b53;
   font-size: 5rem;
@@ -828,6 +930,11 @@ button {
   display: none;
 }
 
+.selectionLabel:focus {
+  outline: none;
+  border: 3px solid #c31727;
+}
+
 .radioImage {
   width: 100px;
   border-radius: 0% 75% 75% 0% / 100% 100% 100% 100%;
@@ -854,10 +961,20 @@ button {
   color: white;
   background-color: rgba(16, 59, 83, 0.8);
   border: none;
+  border-radius: 35px;
 }
 
 .genderBtn:visited {
   color: white;
+}
+
+.genderBtn:hover,
+.genderBtn:focus {
+  outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .preview {
@@ -907,6 +1024,11 @@ video {
 button:disabled {
   background: #dddddd;
   cursor: default;
+}
+
+button:disabled:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .formSelections {
@@ -985,9 +1107,8 @@ button:disabled {
   display: none;
 }
 
-.dynamicLogo {
-  text-transform: uppercase;
-  display: none;
+.dynamicLogo img {
+  width: 100px;
 }
 
 /* Portrait tablet and small desktops */

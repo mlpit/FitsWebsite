@@ -33,43 +33,33 @@ app.dynamicContent = () => {
 }
 
 app.cookies = () => {
-    // document.cookie = 'user='+JSON.stringify(user)+'; expires='+ new Date(2022, 01, 01).toUTCString();
+    // https://github.com/js-cookie/js-cookie
+    Cookies.set("name", "JohnsonBros", {expires: 7});
 
-    // console.log(document.cookie);
+    const location = Cookies.get("name");
 
-    function setCookie(cname, cvalue, exdays) {
-        var d = new Date();
-        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-        var expires = "expires=" + d.toUTCString();
-        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    if (location === "JohnsonBros") {
+        $('#dynamicLogo').show();
+        // also change email address in form
     }
+    
+    // var url = "(location.href.match(/utm\_source\=google/ig))";
 
-    function getCookie(cname) {
-        var name = cname + "=";
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
-            }
-        }
-        return "";
-    }
+    // if (location.href.match(/utm\_source\=google/ig)) {
+    //     $('body').addClass('test');
+    //     $.cookie('number', 'url');
 
-    function checkCookie() {
-        var user = getCookie("username");
-        if (user != "") {
-            alert("Welcome again " + user);
-        } else {
-            user = prompt("Please enter your name:", "");
-            if (user != "" && user != null) {
-                setCookie("username", user, 365);
-            }
-        }
-    }
+    // }
+
+    // if ($.cookie('number')) {
+    //     $('body').addClass('test');
+    // }
+
+    // 
+
+    // var url = window.location.search;
+    // if (url.indexOf('?src=uni') !== -1)
+    //     document.cookie = "src=uni";
 }
 
 app.scrollDown = () => {
@@ -107,48 +97,80 @@ app.swapImagesMen = () => {
 }
 
 app.sendEmail = () => {
-    const settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://fitsfunction.azurewebsites.net/api/EmailOrder?code=ZNR7EUtipflirok2tNHP73O87oYKN0b7P/oXtpAt8fMv0195mW6Fnw==",
-        "method": "POST",
-        "headers": {
-            "authorization": "Bearer XXXXXXXXXXXXX",
-            "content-type": "application/json"
-        },
-        "processData": false,
-        "data": {
-            "CompanyName": "Johnson Bros Shoes",
-            "CompanyEmail": "bsmith@pedbasis.com",
-            "PatientName": "Joe Blowe",
-            "Address": "123 Main St",
-            "City": "Toronto",
-            "Prov": "ON",
-            "Postal": "M1M1A1",
-            "Email": "bsmith@mlpgroup.org",
-            "Phone": "5555555555",
-            "DOB": "1977-09-15",
-            "ShoeLeft": "13",
-            "ShoeRight": "13",
-            "Model": "Teenslipper",
-            "Upper": "Blue Fantasy Leather",
-            "TopCover": "Grey Leather",
-            "Cushion": "3mm",
-            "Footbed": "EVA Black",
-            "Elevation": "None",
-            "Sole": "Black"
-        }
-    }
-
-    $.ajax(settings).done(function (response) {
-        console.log("SendGrid Response:", response);
+    $("#finalForm button").on('click', function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: "https://fitsfunction.azurewebsites.net/api/EmailOrder?code=ZNR7EUtipflirok2tNHP73O87oYKN0b7P/oXtpAt8fMv0195mW6Fnw==", // url where to submit the request
+            type: "POST", // type of action POST || GET
+            dataType: 'json', // data type
+            data: $("#finalForm").serialize(), // post data || get data
+            success: function (result) {
+                // you can see the result from the console
+                // tab of the developer tools
+                console.log(result);
+            },
+            error: function (xhr, resp, text) {
+                console.log(xhr, resp, text);
+            }
+        })
     });
+
+//     $("#finalForm").submit(function (event) {
+//         event.preventDefault();
+//         $.post("https://fitsfunction.azurewebsites.net/api/EmailOrder?code=ZNR7EUtipflirok2tNHP73O87oYKN0b7P/oXtpAt8fMv0195mW6Fnw==", $("#finalForm").serialize())
+//             .done(function (data) {
+//                 if (data == "SUCCESS") {
+//                     //Say Sent
+//                 }
+//                 else {
+//                     //Say Error
+//                 }
+//             };
+//     });
+// });
+
+    // const settings = {
+    //     "async": true,
+    //     "crossDomain": true,
+    //     "url": "https://fitsfunction.azurewebsites.net/api/EmailOrder?code=ZNR7EUtipflirok2tNHP73O87oYKN0b7P/oXtpAt8fMv0195mW6Fnw==",
+    //     "method": "POST",
+    //     "headers": {
+    //         "authorization": "Bearer XXXXXXXXXXXXX",
+    //         "content-type": "application/json"
+    //     },
+    //     "processData": false,
+    //     "data": {
+    //         "CompanyName": "Johnson Bros Shoes",
+    //         "CompanyEmail": "bsmith@pedbasis.com",
+    //         "PatientName": "Joe Blowe",
+    //         "Address": "123 Main St",
+    //         "City": "Toronto",
+    //         "Prov": "ON",
+    //         "Postal": "M1M1A1",
+    //         "Email": "bsmith@mlpgroup.org",
+    //         "Phone": "5555555555",
+    //         "DOB": "1977-09-15",
+    //         "ShoeLeft": "13",
+    //         "ShoeRight": "13",
+    //         "Model": "Teenslipper",
+    //         "Upper": "Blue Fantasy Leather",
+    //         "TopCover": "Grey Leather",
+    //         "Cushion": "3mm",
+    //         "Footbed": "EVA Black",
+    //         "Elevation": "None",
+    //         "Sole": "Black"
+    //     }
+    // }
+
+    // $.ajax(settings).done(function (response) {
+    //     console.log("SendGrid Response:", response);
+    // });
     
 }
 
 app.init = () => {
-    app.dynamicContent();
-    // app.cookies();
+    // app.dynamicContent();
+    app.cookies();
     app.scrollDown();
     app.navSlide();
     setInterval('app.swapImagesWomen()', 4000);

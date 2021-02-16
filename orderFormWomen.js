@@ -219,7 +219,7 @@ orderApp.choices = () => {
 
     models.forEach(model => {
         $('#modelSelection').append(`
-            <label class="selectionLabel">${model.name}
+            <label class="selectionLabel" tabindex="0">${model.name}
                 <input type="radio" name="model" value="${model.name}">
                 <img class="radioImage modelImage" src="${model.imageUrl}" alt="${model.name} sandal">
             </label>
@@ -230,7 +230,7 @@ orderApp.choices = () => {
 
     topCovers.forEach(topCover => {
         $('#topCoverSelection').append(`
-            <label class="selectionLabel">${topCover.name}
+            <label class="selectionLabel" tabindex="0">${topCover.name}
                 <input type="radio" name="upper" value="${topCover.name}">
                 <img class="radioImage" src="${topCover.imageUrl}" alt="${topCover.name} color sample">
             </label>
@@ -241,7 +241,7 @@ orderApp.choices = () => {
 
     midlayers.forEach(midlayer => {
         $('#midlayerSelection').append(`
-            <label class="selectionLabel">${midlayer.name}
+            <label class="selectionLabel" tabindex="0">${midlayer.name}
                 <input type="radio" name="upper" value="${midlayer.name}">
                 <img class="radioImage" src="${midlayer.imageUrl}" alt="${midlayer.name} color sample">
             </label>
@@ -252,7 +252,7 @@ orderApp.choices = () => {
 
     blanks.forEach(blank => {
         $('#blankSelection').append(`
-            <label class="selectionLabel">${blank.name}
+            <label class="selectionLabel" tabindex="0">${blank.name}
                 <input type="radio" name="upper" value="${blank.name}">
                 <img class="radioImage" src="${blank.imageUrl}" alt="${blank.name} color sample">
             </label>
@@ -263,7 +263,7 @@ orderApp.choices = () => {
 
     bottomSoles.forEach(bottomSole => {
         $('#soleSelection').append(`
-            <label class="selectionLabel">${bottomSole.name}
+            <label class="selectionLabel" tabindex="0">${bottomSole.name}
                 <input type="radio" name="upper" value="${bottomSole.name}">
                 <img class="radioImage" src="${bottomSole.imageUrl}" alt="${bottomSole.name} color sample">
             </label>
@@ -285,7 +285,7 @@ orderApp.upperDisplay = () => {
         uppersFiltered.forEach(upper => {
             
             $('#upperSelection').append(`
-                <label class="selectionLabel">${upper.name}
+                <label class="selectionLabel" tabindex="0">${upper.name}
                     <input type="radio" name="upper" value="${upper.name}">
                     <img class="radioImage" src="${upper.imageUrl}" alt="${upper.name} color sample">
                 </label>
